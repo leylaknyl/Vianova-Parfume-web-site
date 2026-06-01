@@ -6,52 +6,117 @@
 
 body{
     font-family:Arial, sans-serif;
+    background:#fff;
 }
 
-header{
+.top-header{
+    width:100%;
+}
+
+.top-links{
+    height:45px;
+    background:#d8b9f2;
     display:flex;
-    justify-content:space-between;
+    justify-content:flex-end;
     align-items:center;
-    padding:20px 60px;
-    background:#f8d7e8;
+    padding:0 60px;
+    gap:30px;
 }
 
-.logo h1{
-    color:#7a2950;
-}
-
-nav a{
+.top-links a{
     text-decoration:none;
-    margin-left:25px;
-    color:#333;
+    color:black;
+    font-size:17px;
+}
+
+.main-header{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    padding:30px 50px;
+}
+
+.logo{
+    font-size:42px;
+    font-weight:bold;
+    letter-spacing:3px;
+    min-width:180px;
+}
+
+.search-container{
+    flex:1;
+    display:flex;
+    height:58px;
+    border:1px solid #d9d9d9;
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.search-container input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:0 20px;
+    font-size:18px;
+}
+
+.search-container button{
+    width:70px;
+    border:none;
+    background:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.header-icons{
+    display:flex;
+    gap:28px;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.category-menu{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    padding-bottom:25px;
+}
+
+.category-menu a{
+    text-decoration:none;
+    color:black;
+    font-size:18px;
+}
+
+.category-menu a:last-child{
     font-weight:bold;
 }
 
 .hero{
-    height:80vh;
+    height:70vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(#ffe6f0,#ffffff);
+    background:linear-gradient(#fff,#f8e8f2);
 }
 
 .hero h2{
-    font-size:55px;
+    font-size:60px;
     color:#7a2950;
 }
 
 .hero p{
+    font-size:22px;
     margin-top:10px;
-    font-size:20px;
 }
 
 .hero button{
     margin-top:20px;
-    padding:12px 30px;
+    padding:14px 35px;
     border:none;
     background:#7a2950;
     color:white;
-    cursor:pointer;
     border-radius:5px;
+    cursor:pointer;
 }
