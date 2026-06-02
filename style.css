@@ -286,6 +286,7 @@ body {
   padding-left: 120px;
 }
 
+<<<<<<< HEAD
 .footer-section h3 {
   color: var(--gold);
   margin-bottom: 20px;
@@ -296,6 +297,18 @@ body {
   color: white;
   line-height: 1.8;
   font-size: 16px;
+=======
+.footer-section h3{
+    color:#d8b36a;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.footer-section p{
+    color:#f7f2eb;
+    line-height:1.8;
+    font-size:16px;
+>>>>>>> 2f76c2bd1885f87b7b678e6ae5a0c3c68ffab7b7
 }
 
 .footer-section i {
@@ -352,6 +365,160 @@ body {
   .contact-section {
     padding-left: 0;
   }
+}
+.hero-overlay h1{
+    animation:fadeUp 1.5s ease;
+}
+
+.hero-overlay p{
+    animation:fadeUp 2s ease;
+}
+
+.hero-overlay button{
+    animation:fadeUp 2.5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.hero-banner img{
+    animation:zoomHero 15s infinite alternate ease-in-out;
+}
+
+@keyframes zoomHero{
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+}
+.brand-story{
+    padding:80px 20px;
+    text-align:center;
+    background:var(--light-cream);
+}
+
+.brand-story h2{
+    font-size:42px;
+    color:var(--burgundy);
+    margin-bottom:20px;
+}
+
+.brand-story p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.9;
+    color:#555;
+}
+.why-vianova{
+    padding:80px 20px;
+    text-align:center;
+    background:#f7f2eb;
+}
+
+.why-vianova h2{
+    font-size:48px;
+    color:#7b0d1e;
+    margin-bottom:60px;
+}
+
+.why-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.why-card{
+    width:260px;
+    background:white;
+    padding:35px 25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-10px);
+}
+
+.why-card i{
+    font-size:40px;
+    color:#c9a15d;
+    margin-bottom:20px;
+}
+
+.why-card h3{
+    color:#7b0d1e;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#555;
+    font-size:17px;
+    line-height:1.7;
+}
+/* Müşteri Yorumları */
+
+.reviews{
+    padding:100px 50px;
+    text-align:center;
+    background:#faf7f2;
+}
+
+.reviews h2{
+    font-size:42px;
+    color:#7b0d1e;
+    margin-bottom:60px;
+}
+
+.reviews-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.review-card{
+    width:320px;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+}
+
+.stars{
+    color:#d8b36a;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.review-card p{
+    color:#555;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.review-card h4{
+    margin-top:20px;
+    color:#7b0d1e;
 }
 
 /* PRODUCTS PAGE */
