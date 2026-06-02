@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vianova Parfüm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-header">
+
+    <div class="top-links">
+        <a href="#">Mağazalar</a>
+        <a href="#">İletişim</a>
+    </div>
+
+    <div class="main-header">
+        <div class="logo">
+    <img src="../images/vianovalogo.png" alt="Vianova">
+</div>
+
+        <div class="search-container">
+            <input type="text" id="searchInput">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <div class="header-icons">
+            <i class="fa-regular fa-user"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
+        </div>
+    </div>
+
+    <nav class="category-menu">
+        <a href="#"> Kadın Parfüm</a>
+        <a href="#"> Erkek Parfüm</a>
+        <a href="#"> Koleksiyonlar</a>
+        <a href="#">Öne Çıkanlar</a>
+        <a href="#">Kampanyalar</a>
+    </nav>
+
+</header>
+
+    <section class="hero-banner">
+
+    <img src="..//images/hero-banner.jpeg" alt="Vianova Perfume Collection">
+
+    <div class="hero-overlay">
+        <h1>Luxury Niche Perfumes</h1>
+
+        <p>
+            Zarafetin ve Kalıcılığın Buluştuğu Nokta
+        </p>
+
+        <button>Koleksiyonu Keşfet</button>
+    </div>
+
+</section>
+<section class="brand-story">
+    <h2>Vianova’nın Hikayesi</h2>
+    <p>
+        Her koku bir hikâye anlatır. Vianova, özenle seçilmiş notalarla
+        zarafet, kalıcılık ve özgünlüğü bir araya getiren niş parfüm
+        deneyimi sunar.
+    </p>
+</section>
+<section class="why-vianova">
+
+    <h2>Neden Vianova?</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <i class="fa-solid fa-leaf"></i>
+            <h3>Kaliteli İçerikler</h3>
+            <p>Özenle seçilmiş esanslar ve özel koku notaları.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-regular fa-clock"></i>
+            <h3>Uzun Süre Kalıcılık</h3>
+            <p>Gün boyu etkisini koruyan özel formüller.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-gift"></i>
+            <h3>Özel Koleksiyonlar</h3>
+            <p>Her zevke hitap eden seçkin parfüm serileri.</p>
+        </div>
+
+        <div class="why-card">
+            <i class="fa-solid fa-gem"></i>
+            <h3>Özgün Deneyim</h3>
+            <p>Kişiliğinizi yansıtan benzersiz kokular.</p>
+        </div>
+
+    </div>
+
+</section>
+    <section class="featured">
+    <h2>Öne Çıkan Parfümler</h2>
+    <p class="section-subtitle">Vianova’nın en sevilen niş kokularını keşfedin</p>
+
+    <div class="featured-container">
+
+        <div class="featured-card">
+            <img src="../images/chrome.jpeg" alt="Chrome">
+            <h3>Chrome</h3>
+            <p>Erkek Parfüm</p>
+            <span>₺1585</span>
+            <button>İncele</button>
+        </div>
+
+        <div class="featured-card">
+            <img src="../images/radius.jpeg" alt="Radius">
+            <h3>Radius</h3>
+            <p>Kadın Parfüm</p>
+            <span>₺1662</span>
+            <button>İncele</button>
+        </div>
+
+        <div class="featured-card">
+            <img src="../images/offline2.jpeg" alt="Offline">
+            <h3>Offline</h3>
+            <p>Kadın Parfüm</p>
+            <span>₺1650</span>
+            <button>İncele</button>
+        </div>
+
+    </div>
+</section>
+ <footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-section">
+            <h3>Vianova</h3>
+            <p>Niş parfüm dünyasının seçkin kokularını keşfedin.</p>
+        </div>
+
+        <div class="footer-section contact-section">
+            <h3>İletişim</h3>
+            <p>info@vianova.com</p>
+            <p>+90 555 555 55 55</p>
+            <p>
+                <i class="fa-brands fa-instagram"></i>
+                @vianova_perfums
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Vianova Perfume. Tüm Hakları Saklıdır.</p>
+    </div>
+</footer>
+<script>
+const texts = [
+    "Parfüm ...",
+    "Kadın Parfümleri",
+    "Erkek Parfümleri",
+    "Niş Kokular",
+    "Vianova Koleksiyonu"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+
+const input = document.getElementById("searchInput");
+
+function typeEffect() {
+
+    let currentText = texts[textIndex];
+
+    input.setAttribute(
+        "placeholder",
+        currentText.substring(0, charIndex + 1)
+    );
+
+    charIndex++;
+
+    if(charIndex === currentText.length){
+
+        setTimeout(() => {
+
+            charIndex = 0;
+            textIndex++;
+
+            if(textIndex >= texts.length){
+                textIndex = 0;
+            }
+
+        }, 1500);
+    }
+}
+
+setInterval(typeEffect, 120);
+</script>
+</body>
+</html>
