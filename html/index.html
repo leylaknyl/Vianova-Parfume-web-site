@@ -12,8 +12,7 @@
 
 
     <div class="quiz-popup">
-    <h3>Koku Testi</h3>
-    <p>Size uygun olan parfümü öğrenmek ister misiniz?</p>
+    <p class="quiz-title">Size uygun olan parfümü öğrenmek ister misiniz?</p>
     <button id="openQuizBtn">Teste Başla</button>
 </div>
 
@@ -21,25 +20,61 @@
     <div class="quiz-box">
         <button id="closeQuizBtn" class="close-btn">X</button>
 
-        <h2>Koku Testi</h2>
+        <h2>Hemen Öğrenelim</h2>
 
         <form id="quizForm">
             <h3>1. Hangi koku tarzını tercih edersiniz?</h3>
-            <label><input type="radio" name="soru1" value="A"> Çiçeksi Meyvemsi Tatlı</label>
-            <label><input type="radio" name="soru1" value="B"> Odunsu Baharatlı Güçlü</label>
-            <label><input type="radio" name="soru1" value="C"> Amber Oryantal Sıcak</label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru1" value="A">
+                <span>Çiçeksi Meyvemsi Tatlı</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru1" value="B">
+                <span>Odunsu Baharatlı Güçlü</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru1" value="C">
+                <span>Amber Oryantal Sıcak</span>
+            </label>
 
             <h3>2. Parfümünüz size nasıl hissettirmeli?</h3>
-            <label><input type="radio" name="soru2" value="A"> Enerjik ve Zarif</label>
-            <label><input type="radio" name="soru2" value="B"> Güçlü ve Karizmatik</label>
-            <label><input type="radio" name="soru2" value="C"> Çekici ve Gizemli</label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru2" value="A">
+                <span>Enerjik ve Zarif</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru2" value="B">
+                <span>Güçlü ve Karizmatik</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru2" value="C">
+                <span>Çekici ve Gizemli</span>
+            </label>
 
             <h3>3. Parfümü en çok nerede kullanacaksınız?</h3>
-            <label><input type="radio" name="soru3" value="A"> Günlük Kullanım</label>
-            <label><input type="radio" name="soru3" value="B"> İş ve Özel Davetler</label>
-            <label><input type="radio" name="soru3" value="C"> Akşam ve Gece Kullanımı</label>
 
-            <button type="button" id="showResultBtn">Sonucumu Öğren</button>
+            <label class="quiz-option">
+                <input type="radio" name="soru3" value="A">
+                <span>Günlük Kullanım</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru3" value="B">
+                <span>İş ve Özel Davetler</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="soru3" value="C">
+                <span>Akşam ve Gece Kullanımı</span>
+            </label>
+
+            <button type="button" id="showResultBtn">Sonucunu Öğren</button>
         </form>
 
         <div id="quizResult"></div>
