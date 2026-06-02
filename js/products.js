@@ -9,9 +9,9 @@ const products = [
     scent: "Oriental",
     price: 1662,
     images: [
-      "images/radius1.jpg",
-      "images/radius2.jpg",
-      "images/radius3.jpg"
+      "../images/radius1.jpg",
+      "../images/radius2.jpg",
+      "../images/radius3.jpg"
     ],
     topNotes: "Armut, Pembe Biber, Portakal Çiçeği",
 middleNotes: "Kahve, Yasemin, Acı Badem",
@@ -28,9 +28,9 @@ description: "Radius, girdiği ortamda iz bırakmak isteyen kadınlar için tasa
     scent: "Floral",
     price: 1670,
     images: [
-      "images/thetime1.jpg",
-      "images/thetime2.jpg",
-      "images/thetime3.jpg"
+      "../images/thetime1.jpg",
+      "../images/thetime2.jpg",
+      "../images/thetime3.jpg"
     ],
     topNotes: "Çarkıfelek, Şeftali, Armut, Ahududu, Siyah Frenk Üzümü, Kum Akoru",
 middleNotes: "Müge",
@@ -47,9 +47,9 @@ description: "The Time, unutulmaz anların zarafetinden ilham alan çiçeksi ve 
     scent: "Fruity",
     price: 1650,
     images: [
-      "images/offline1.jpg",
-      "images/offline2.jpg",
-      "images/offline3.jpg"
+      "../images/offline1.jpg",
+      "../images/offline2.jpg",
+      "../images/offline3.jpg"
     ],
     topNotes: "Çilek, Ahududu, Vişne, Böğürtlen, Yaban Mersini, Siyah Frenk Üzümü",
 middleNotes: "Menekşe, Yasemin",
@@ -66,9 +66,9 @@ description: "Off Line, enerjik ve modern kadınlar için tasarlanmış canlı b
     scent: "Spicy",
     price: 1585,
     images: [
-      "images/chrome1.jpg",
-      "images/chrome2.jpg",
-      "images/chrome3.jpg"
+      "../images/chrome1.jpg",
+      "../images/chrome2.jpg",
+      "../images/chrome3.jpg"
     ],
      topNotes: "Tarçın, Kakule, Portakal Çiçeği, Bergamot",
 middleNotes: "Bourbon Vanilya, Elemi Reçinesi",
@@ -84,9 +84,9 @@ description: "Chrome, güçlü ve sofistike bir duruşa sahip erkekler için tas
     scent: "Aromatic",
     price: 1560,
     images: [
-      "images/chaos1.jpg",
-      "images/chaos2.jpg",
-      "images/chaos3.jpg"
+      "../images/chaos1.jpg",
+      "../images/chaos2.jpg",
+      "../images/chaos3.jpg"
     ],
    topNotes: "Bergamot, Liçi, Şeftali",
 middleNotes: "Şakayık, Yasemin, Portakal Çiçeği",
@@ -103,9 +103,9 @@ description: "Chaos, ferahlık, zarafet ve maskülen enerjiyi bir araya getiren 
     scent: "Aromatic",
     price: 1560,
     images: [
-      "images/jawa1.jpg",
-      "images/jawa2.jpg",
-      "images/jawa3.jpg"
+      "../images/jawa1.jpg",
+      "../images/jawa2.jpg",
+      "../images/jawa3.jpg"
     ],
     topNotes: "Tarçın, Kakule, Greyfurt",
 middleNotes: "Lavanta",
@@ -142,8 +142,8 @@ function displayProducts(productList) {
         <p class="price">₺${product.price}</p>
 
         <div class="product-buttons">
-          <button onclick="viewDetails(${product.id})">View Details</button>
-          <button class="cart-btn" data-id="${product.id}">Add to Cart</button>
+          <button onclick="viewDetails(${product.id})">Detayları Gör</button>
+          <button class="cart-btn" data-id="${product.id}">Sepete Ekle</button>
         </div>
       </div>
     `;
