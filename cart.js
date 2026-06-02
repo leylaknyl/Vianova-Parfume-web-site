@@ -1,5 +1,4 @@
 const mesaj = document.getElementById("mesaj");
-const ekleBtn = document.getElementById("ekleBtn");
 const sepetListesi = document.getElementById("sepetListesi");
 const toplamFiyat = document.getElementById("toplamFiyat");
 const sepetiTemizleBtn = document.getElementById("sepetiTemizleBtn");
@@ -61,15 +60,22 @@ function sepetiGoster() {
 
     for (let i = 0; i < sepet.length; i++) {
         sepetListesi.innerHTML += `
-            <li>
-          ${sepet[i].isim} - ${sepet[i].cinsiyet}
-            <br>
-            Fiyat: ${sepet[i].fiyat} TL
-            <br>
-            Adet: ${sepet[i].adet}
-            <button onclick="sepettenSil(${i})">Sil</button>
-            </li>
-        `;
+    <li>
+        <h3>${sepet[i].isim}</h3>
+
+        <p>Cinsiyet: ${sepet[i].cinsiyet}</p>
+
+        <p>Fiyat: ${sepet[i].fiyat} TL</p>
+
+        <p>Adet: ${sepet[i].adet}</p>
+
+        <button onclick="sepettenSil(${i})">
+            Ürünü Sil
+        </button>
+
+        <hr>
+    </li>
+`;
 
         toplam += sepet[i].fiyat;
     }

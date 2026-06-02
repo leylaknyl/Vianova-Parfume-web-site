@@ -144,10 +144,18 @@ function displayProducts(productList) {
         <p class="price">₺${product.price}</p>
 
         <div class="product-buttons">
-          <button onclick="viewDetails(${product.id})">View Details</button>
-          <button class="cart-btn" data-id="${product.id}">Add to Cart</button>
-        </div>
-      </div>
+  <button onclick="viewDetails(${product.id})">
+    View Details
+  </button>
+
+  <button class="cart-btn" data-id="${product.id}">
+    Add to Cart
+  </button>
+
+  <button onclick="favoriyeEkle(${product.id})">
+    ❤️
+  </button>
+</div>
     `;
 
     productsContainer.appendChild(productCard);
