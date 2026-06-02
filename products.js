@@ -9,9 +9,9 @@ const products = [
     scent: "Oriental",
     price: 1662,
     images: [
-      "images/radius-1.jpg",
-      "images/radius-2.jpg",
-      "images/radius-3.jpg"
+      "images/radius1.jpg",
+      "images/radius2.jpg",
+      "images/radius3.jpg"
     ],
     topNotes: "Pear, Pink Pepper, Orange Blossom",
     middleNotes: "Coffee, Jasmine, Bitter Almond",
@@ -28,9 +28,9 @@ const products = [
     scent: "Floral",
     price: 1670,
     images: [
-      "images/the-time-1.jpg",
-      "images/the-time-2.jpg",
-      "images/the-time-3.jpg"
+      "images/thetime1.jpg",
+      "images/thetime2.jpg",
+      "images/thetime3.jpg"
     ],
     topNotes: "Passion Fruit, Peach, Pear, Raspberry, Blackcurrant, Sand Accord",
     middleNotes: "Lily of the Valley",
@@ -47,9 +47,9 @@ const products = [
     scent: "Fruity",
     price: 1650,
     images: [
-      "images/off-line-1.jpg",
-      "images/off-line-2.jpg",
-      "images/off-line-3.jpg"
+      "images/offline1.jpg",
+      "images/offline2.jpg",
+      "images/offline3.jpg"
     ],
     topNotes: "Strawberry, Raspberry, Sour Cherry, Blackberry, Blueberry, Blackcurrant",
     middleNotes: "Violet, Jasmine",
@@ -66,9 +66,9 @@ const products = [
     scent: "Spicy",
     price: 1585,
     images: [
-      "images/chrome-1.jpg",
-      "images/chrome-2.jpg",
-      "images/chrome-3.jpg"
+      "images/chrome1.jpg",
+      "images/chrome2.jpg",
+      "images/chrome3.jpg"
     ],
     topNotes: "Cinnamon, Cardamom, Orange Blossom, Bergamot",
     middleNotes: "Bourbon Vanilla, Elemi Resin",
@@ -85,9 +85,9 @@ const products = [
     scent: "Aromatic",
     price: 1560,
     images: [
-      "images/chaos-1.jpg",
-      "images/chaos-2.jpg",
-      "images/chaos-3.jpg"
+      "images/chaos1.jpg",
+      "images/chaos2.jpg",
+      "images/chaos3.jpg"
     ],
     topNotes: "Bergamot, Lychee, Peach",
     middleNotes: "Peony, Jasmine, Orange Blossom",
@@ -104,9 +104,9 @@ const products = [
     scent: "Aromatic",
     price: 1560,
     images: [
-      "images/jawa-1.jpg",
-      "images/jawa-2.jpg",
-      "images/jawa-3.jpg"
+      "images/jawa1.jpg",
+      "images/jawa2.jpg",
+      "images/jawa3.jpg"
     ],
     topNotes: "Cinnamon, Cardamom, Grapefruit",
     middleNotes: "Lavender",
