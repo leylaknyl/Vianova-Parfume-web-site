@@ -10,6 +10,41 @@
 
 <body>
 
+
+    <div class="quiz-popup">
+    <h3>Koku Testi</h3>
+    <p>Size uygun olan parfümü öğrenmek ister misiniz?</p>
+    <button id="openQuizBtn">Teste Başla</button>
+</div>
+
+<div id="quizModal" class="quiz-modal">
+    <div class="quiz-box">
+        <button id="closeQuizBtn" class="close-btn">X</button>
+
+        <h2>Koku Testi</h2>
+
+        <form id="quizForm">
+            <h3>1. Hangi koku tarzını tercih edersiniz?</h3>
+            <label><input type="radio" name="soru1" value="A"> Çiçeksi Meyvemsi Tatlı</label>
+            <label><input type="radio" name="soru1" value="B"> Odunsu Baharatlı Güçlü</label>
+            <label><input type="radio" name="soru1" value="C"> Amber Oryantal Sıcak</label>
+
+            <h3>2. Parfümünüz size nasıl hissettirmeli?</h3>
+            <label><input type="radio" name="soru2" value="A"> Enerjik ve Zarif</label>
+            <label><input type="radio" name="soru2" value="B"> Güçlü ve Karizmatik</label>
+            <label><input type="radio" name="soru2" value="C"> Çekici ve Gizemli</label>
+
+            <h3>3. Parfümü en çok nerede kullanacaksınız?</h3>
+            <label><input type="radio" name="soru3" value="A"> Günlük Kullanım</label>
+            <label><input type="radio" name="soru3" value="B"> İş ve Özel Davetler</label>
+            <label><input type="radio" name="soru3" value="C"> Akşam ve Gece Kullanımı</label>
+
+            <button type="button" id="showResultBtn">Sonucumu Öğren</button>
+        </form>
+
+        <div id="quizResult"></div>
+    </div>
+</div>
     <header class="top-header">
 
     <div class="top-links">
@@ -117,6 +152,7 @@
         <p>© 2026 Vianova Perfume. Tüm Hakları Saklıdır.</p>
     </div>
 </footer>
+<<<<<<< HEAD:index.html
 <script>
 const texts = [
     "Parfüm ...",
@@ -159,5 +195,8 @@ function typeEffect() {
 
 setInterval(typeEffect, 120);
 </script>
+=======
+<script src="js/quiz.js"></script>
+>>>>>>> 39e4d5e01a688e13ae4dc4960ced4d150b8305cb:html/index.html
 </body>
 </html>
