@@ -160,3 +160,81 @@ body{
     background:var(--dark-burgundy);
     color:var(--gold);
 }
+.featured{
+    padding:100px 60px 80px;
+    background:#fff;
+    text-align:center;
+}
+
+.featured h2{
+    font-size:40px;
+    color:var(--burgundy);
+}
+
+.section-subtitle{
+    color:#666;
+    margin-top:10px;
+}
+
+.featured-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.featured-card{
+    width:300px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border:1px solid transparent;
+}
+
+.featured-card:hover{
+    transform:translateY(-10px);
+    border:1px solid var(--gold);
+}
+
+.featured-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.featured-card h3{
+    color:var(--burgundy);
+    margin-top:20px;
+    font-size:24px;
+}
+
+.featured-card p{
+    color:#666;
+    margin:10px 0;
+}
+
+.featured-card span{
+    display:block;
+    color:var(--gold);
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.featured-card button{
+    margin-bottom:25px;
+    padding:12px 30px;
+    border:none;
+    background:var(--burgundy);
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.featured-card button:hover{
+    background:#4a0811;
+    color:var(--gold);
+}
