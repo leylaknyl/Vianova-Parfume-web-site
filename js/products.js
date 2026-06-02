@@ -142,6 +142,11 @@ function displayProducts(productList) {
         <p class="price">₺${product.price}</p>
 
         <div class="product-buttons">
+
+          <button onclick="viewDetails(${product.id})">Detayları Gör</button>
+          
+        </div>
+
         <button onclick="viewDetails(${product.id})">Detayları Gör</button>
 
         <button class="cart-btn" data-id="${product.id}">
@@ -152,6 +157,7 @@ function displayProducts(productList) {
           ♥
         </button>
       </div>
+
       </div>
     `;
 
@@ -160,19 +166,19 @@ function displayProducts(productList) {
 }
 
 function filterProducts() {
-  
-  const selectedCategory = categoryFilter.value;
-  const selectedScent = scentFilter.value;
-  const selectedPrice = priceFilter.value;
+  const selectedCategory = categoryFilter.value.trim();
+  const selectedScent = scentFilter.value.trim();
+  const selectedPrice = priceFilter.value.trim();
 
   const filteredProducts = products.filter(product => {
-    
+    const productCategory = product.category.trim();
+    const productScent = product.scent.trim();
 
     const matchesCategory =
-      selectedCategory === "all" || product.category === selectedCategory;
+      selectedCategory === "all" || productCategory === selectedCategory;
 
     const matchesScent =
-      selectedScent === "all" || product.scent === selectedScent;
+      selectedScent === "all" || productScent === selectedScent;
 
     let matchesPrice = true;
 
@@ -190,11 +196,13 @@ function filterProducts() {
   displayProducts(filteredProducts);
 }
 
-function viewDetails(productId) {
-  localStorage.setItem("selectedProductId", productId);
-  window.location.href = "product-detail.html";
-}
 
+if (productsContainer) {
+  categoryFilter.addEventListener("change", filterProducts);
+  scentFilter.addEventListener("change", filterProducts);
+  priceFilter.addEventListener("change", filterProducts);
+
+  displayProducts(products);
 
 categoryFilter.addEventListener("change", filterProducts);
 scentFilter.addEventListener("change", filterProducts);
@@ -219,4 +227,5 @@ function favoriyeEkle(productId) {
   localStorage.setItem("favoriler", JSON.stringify(favoriler));
 
   alert(secilenUrun.name + " favorilere eklendi.");
-}
+
+} }
