@@ -142,9 +142,16 @@ function displayProducts(productList) {
         <p class="price">₺${product.price}</p>
 
         <div class="product-buttons">
-          <button onclick="viewDetails(${product.id})">Detayları Gör</button>
-          <button class="cart-btn" data-id="${product.id}">Sepete Ekle</button>
-        </div>
+        <button onclick="viewDetails(${product.id})">Detayları Gör</button>
+
+        <button class="cart-btn" data-id="${product.id}">
+          Sepete Ekle
+        </button>
+
+        <button class="favorite-btn" onclick="favoriyeEkle(${product.id})">
+          ♥
+        </button>
+      </div>
       </div>
     `;
 
@@ -194,3 +201,22 @@ scentFilter.addEventListener("change", filterProducts);
 priceFilter.addEventListener("change", filterProducts);
 
 displayProducts(products);
+
+function favoriyeEkle(productId) {
+  const secilenUrun = products.find(product => product.id === productId);
+
+  let favoriler = JSON.parse(localStorage.getItem("favoriler")) || [];
+
+  const zatenVarMi = favoriler.some(product => product.id === productId);
+
+  if (zatenVarMi) {
+    alert("Bu ürün zaten favorilerinizde.");
+    return;
+  }
+
+  favoriler.push(secilenUrun);
+
+  localStorage.setItem("favoriler", JSON.stringify(favoriler));
+
+  alert(secilenUrun.name + " favorilere eklendi.");
+}

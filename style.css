@@ -286,7 +286,6 @@ body {
   padding-left: 120px;
 }
 
-<<<<<<< HEAD
 .footer-section h3 {
   color: var(--gold);
   margin-bottom: 20px;
@@ -297,7 +296,7 @@ body {
   color: white;
   line-height: 1.8;
   font-size: 16px;
-=======
+}
 .footer-section h3{
     color:#d8b36a;
     margin-bottom:20px;
@@ -308,7 +307,6 @@ body {
     color:#f7f2eb;
     line-height:1.8;
     font-size:16px;
->>>>>>> 2f76c2bd1885f87b7b678e6ae5a0c3c68ffab7b7
 }
 
 .footer-section i {
@@ -978,7 +976,6 @@ body {
   }
 
 }
-
 /* QUIZ POPUP */
 
 .quiz-popup {
@@ -998,10 +995,9 @@ body {
 
 .quiz-popup:hover {
   transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
 }
 
-.quiz-popup p {
+.quiz-title {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
@@ -1011,17 +1007,11 @@ body {
 .quiz-popup button {
   background: var(--gold);
   color: var(--dark-burgundy);
-  border: 2px solid var(--gold);
+  border: none;
   padding: 10px 22px;
   border-radius: 8px;
-  font-weight: 700;
+  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.quiz-popup button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
 }
 
 .quiz-modal {
@@ -1033,14 +1023,14 @@ body {
 }
 
 .quiz-box {
-  background: var(--cream);
-  color: var(--burgundy);
   width: 90%;
   max-width: 430px;
   max-height: 80vh;
   overflow-y: auto;
   margin: 45px auto;
   padding: 22px;
+  background: var(--cream);
+  color: var(--burgundy);
   border-radius: 18px;
   position: relative;
 }
