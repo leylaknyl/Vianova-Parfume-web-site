@@ -4,6 +4,13 @@
     box-sizing:border-box;
 }
 
+:root{
+    --burgundy:#6b0f1a;
+    --dark-burgundy:#4a0811;
+    --gold:#c8a96a;
+    --cream:#fbf7f2;
+}
+
 body{
     font-family:Arial, sans-serif;
     background:#fff;
@@ -15,7 +22,7 @@ body{
 
 .top-links{
     height:45px;
-    background:#6b0f1a;
+    background:var(--burgundy);
     display:flex;
     justify-content:flex-end;
     align-items:center;
@@ -32,16 +39,22 @@ body{
 .main-header{
     display:flex;
     align-items:center;
-    gap:40px;
-    padding:30px 50px;
+    gap:35px;
+    padding:20px 50px;
 }
 
 .logo{
     font-size:42px;
     font-weight:bold;
     letter-spacing:3px;
-    min-width:180px;
-    color:#6b0f1a;
+    min-width:120px;
+    color:var(--burgundy);
+}
+
+.logo img{
+    width:100px;
+    height:auto;
+    display:block;
 }
 
 .search-container{
@@ -49,7 +62,7 @@ body{
     display:flex;
     height:58px;
     border:1px solid #d9d9d9;
-    border-radius:6px;
+    border-radius:8px;
     overflow:hidden;
 }
 
@@ -67,6 +80,7 @@ body{
     background:white;
     font-size:24px;
     cursor:pointer;
+    color:var(--burgundy);
 }
 
 .header-icons{
@@ -74,6 +88,10 @@ body{
     gap:28px;
     font-size:28px;
     cursor:pointer;
+}
+
+.header-icons i:hover{
+    color:var(--gold);
 }
 
 .category-menu{
@@ -89,7 +107,12 @@ body{
     font-size:18px;
 }
 
+.category-menu a:hover{
+    color:var(--gold);
+}
+
 .category-menu a:last-child{
+    color:var(--burgundy);
     font-weight:bold;
 }
 
@@ -99,25 +122,41 @@ body{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(#ffffff,#f7eef0);
+    background:linear-gradient(#ffffff,var(--cream));
 }
 
 .hero h2{
     font-size:60px;
-    color:#6b0f1a;
+    color:var(--burgundy);
+}
+
+.hero h2::after{
+    content:"";
+    display:block;
+    width:90px;
+    height:3px;
+    background:var(--gold);
+    margin:15px auto 0;
 }
 
 .hero p{
     font-size:22px;
-    margin-top:10px;
+    margin-top:15px;
+    color:#222;
 }
 
-.hero button :hover{
-    margin-top:20px;
-    padding:14px 35px;
-    border:none;
-    background:#4a0811;
+.hero button{
+    margin-top:25px;
+    padding:15px 40px;
+    border:1px solid var(--gold);
+    background:var(--burgundy);
     color:white;
-    border-radius:5px;
+    border-radius:30px;
+    font-size:16px;
     cursor:pointer;
+}
+
+.hero button:hover{
+    background:var(--dark-burgundy);
+    color:var(--gold);
 }
