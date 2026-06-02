@@ -1,11 +1,11 @@
 const products = [
   {
     id: 1,
-    name: "Radius",
+    name: "RADIUS",
     brand: "Vianova",
     type: "EDP",
     size: "50ml",
-    category: "Women",
+    category: "Kadın",
     scent: "Oriental",
     price: 1662,
     images: [
@@ -13,18 +13,18 @@ const products = [
       "images/radius2.jpg",
       "images/radius3.jpg"
     ],
-    topNotes: "Pear, Pink Pepper, Orange Blossom",
-    middleNotes: "Coffee, Jasmine, Bitter Almond",
-    baseNotes: "Vanilla, Patchouli, Cedarwood, Cashmere Wood, Musk, Amber",
-    description: "Radius is a captivating oriental fragrance designed for women who leave a memorable trace wherever they go. It opens with the juicy brightness of pear, pink pepper, and orange blossom, then deepens into an elegant heart of coffee, jasmine, and bitter almond. Warm vanilla, amber, musk, and woody notes create a rich and sophisticated finish, making Radius a bold yet feminine scent for special moments."
+    topNotes: "Armut, Pembe Biber, Portakal Çiçeği",
+middleNotes: "Kahve, Yasemin, Acı Badem",
+baseNotes: "Vanilya, Paçuli, Sedir Ağacı, Kaşmir Ağacı, Misk, Amber",
+description: "Radius, girdiği ortamda iz bırakmak isteyen kadınlar için tasarlanmış etkileyici bir oryantal kokudur. Armut, pembe biber ve portakal çiçeğinin canlı açılışı; kahve, yasemin ve acı bademin sofistike dokusuyla derinleşir. Vanilya, amber, misk ve odunsu notalarla tamamlanan bu parfüm, güçlü, feminen ve unutulmaz bir imza koku sunar."
   },
   {
     id: 2,
-    name: "The Time",
+    name: "THE TIME",
     brand: "Vianova",
     type: "EDP",
     size: "50ml",
-    category: "Women",
+    category: "Kadın",
     scent: "Floral",
     price: 1670,
     images: [
@@ -32,18 +32,18 @@ const products = [
       "images/thetime2.jpg",
       "images/thetime3.jpg"
     ],
-    topNotes: "Passion Fruit, Peach, Pear, Raspberry, Blackcurrant, Sand Accord",
-    middleNotes: "Lily of the Valley",
-    baseNotes: "Musk, Sandalwood, Vanilla, Patchouli, Heliotrope",
-    description: "The Time is a graceful floral fragrance inspired by unforgettable moments. Its fruity opening blends passion fruit, peach, pear, raspberry, and blackcurrant with a soft sand accord. A delicate lily of the valley heart meets a warm base of musk, sandalwood, vanilla, patchouli, and heliotrope, creating an elegant and feminine signature."
+    topNotes: "Çarkıfelek, Şeftali, Armut, Ahududu, Siyah Frenk Üzümü, Kum Akoru",
+middleNotes: "Müge",
+baseNotes: "Misk, Sandal Ağacı, Vanilya, Paçuli, Heliotrop",
+description: "The Time, unutulmaz anların zarafetinden ilham alan çiçeksi ve feminen bir kokudur. Meyvemsi açılışı çarkıfelek, şeftali, armut, ahududu ve siyah frenk üzümüyle canlı bir etki yaratır. Müge notasının narin dokusu; misk, sandal ağacı, vanilya ve paçuliyle birleşerek yumuşak, zarif ve kalıcı bir iz bırakır."
   },
   {
     id: 3,
-    name: "Off Line",
+    name: "OFF LINE",
     brand: "Vianova",
     type: "EDP",
     size: "50ml",
-    category: "Women",
+    category: "Kadın",
     scent: "Fruity",
     price: 1650,
     images: [
@@ -51,18 +51,18 @@ const products = [
       "images/offline2.jpg",
       "images/offline3.jpg"
     ],
-    topNotes: "Strawberry, Raspberry, Sour Cherry, Blackberry, Blueberry, Blackcurrant",
-    middleNotes: "Violet, Jasmine",
-    baseNotes: "Musk, Amber, Oak",
-    description: "Off Line is a playful and modern fruity fragrance created for women with a lively and confident style. It opens with a rich blend of red fruits, including strawberry, raspberry, sour cherry, blackberry, blueberry, and blackcurrant. Violet and jasmine add a soft floral touch, while musk, amber, and oak leave a warm and memorable trail."
+    topNotes: "Çilek, Ahududu, Vişne, Böğürtlen, Yaban Mersini, Siyah Frenk Üzümü",
+middleNotes: "Menekşe, Yasemin",
+baseNotes: "Misk, Amber, Meşe",
+description: "Off Line, enerjik ve modern kadınlar için tasarlanmış canlı bir meyveli kokudur. Çilek, ahududu, vişne, böğürtlen ve yaban mersininin parlak açılışı neşeli ve dikkat çekici bir etki oluşturur. Menekşe ve yaseminin zarif dokusu, misk, amber ve meşe notalarıyla birleşerek sıcak ve akılda kalıcı bir final sunar."
   },
   {
     id: 4,
-    name: "Chrome",
+    name: "CHROME",
     brand: "Vianova",
     type: "EDP",
     size: "50ml",
-    category: "Men",
+    category: "Erkek",
     scent: "Spicy",
     price: 1585,
     images: [
@@ -70,18 +70,17 @@ const products = [
       "images/chrome2.jpg",
       "images/chrome3.jpg"
     ],
-    topNotes: "Cinnamon, Cardamom, Orange Blossom, Bergamot",
-    middleNotes: "Bourbon Vanilla, Elemi Resin",
-    baseNotes: "Praline, Musk, Ambroxan, Guaiac Wood, Tonka Bean",
-    description: "Chrome is a bold spicy fragrance designed for men with a strong and sophisticated presence. Cinnamon, cardamom, orange blossom, and bergamot create a striking opening, while bourbon vanilla and elemi resin add depth and warmth. Praline, musk, ambroxan, guaiac wood, and tonka bean complete the scent with a rich masculine finish."
-  },
+     topNotes: "Tarçın, Kakule, Portakal Çiçeği, Bergamot",
+middleNotes: "Bourbon Vanilya, Elemi Reçinesi",
+baseNotes: "Pralin, Misk, Ambroxan, Guaiac Ağacı, Tonka",
+description: "Chrome, güçlü ve sofistike bir duruşa sahip erkekler için tasarlanmış baharatlı bir kokudur. Tarçın, kakule, portakal çiçeği ve bergamotla etkileyici bir açılış yapar. Bourbon vanilya ve elemi reçinesi kokuya sıcaklık katarken; pralin, misk, ambroxan, guaiac ağacı ve tonka notaları maskülen, derin ve kalıcı bir karakter oluşturur." },
   {
     id: 5,
-    name: "Chaos",
+    name: "CHAOS",
     brand: "Vianova",
     type: "EDP",
     size: "50ml",
-    category: "Men",
+    category: "Erkek",
     scent: "Aromatic",
     price: 1560,
     images: [
@@ -89,18 +88,18 @@ const products = [
       "images/chaos2.jpg",
       "images/chaos3.jpg"
     ],
-    topNotes: "Bergamot, Lychee, Peach",
-    middleNotes: "Peony, Jasmine, Orange Blossom",
-    baseNotes: "Musk, Woody Notes, Oakmoss",
-    description: "Chaos is an aromatic fragrance that combines freshness, elegance, and masculine energy. It begins with a bright blend of bergamot, lychee, and peach, followed by a smooth floral heart of peony, jasmine, and orange blossom. Musk, woody notes, and oakmoss create a clean yet powerful base, making Chaos ideal for everyday sophistication."
+   topNotes: "Bergamot, Liçi, Şeftali",
+middleNotes: "Şakayık, Yasemin, Portakal Çiçeği",
+baseNotes: "Misk, Odunsu Notalar, Meşe Yosunu",
+description: "Chaos, ferahlık, zarafet ve maskülen enerjiyi bir araya getiren aromatik bir kokudur. Bergamot, liçi ve şeftalinin aydınlık açılışı kokuya canlı bir başlangıç verir. Şakayık, yasemin ve portakal çiçeğinin yumuşak kalbi; misk, odunsu notalar ve meşe yosunuyla dengelenerek temiz, güçlü ve günlük kullanıma uygun bir iz bırakır."
   },
   {
     id: 6,
-    name: "Jawa",
+    name: "JAWA",
     brand: "Vianova",
     type: "EDP",
     size: "50ml",
-    category: "Men",
+    category: "Erkek",
     scent: "Aromatic",
     price: 1560,
     images: [
@@ -108,15 +107,14 @@ const products = [
       "images/jawa2.jpg",
       "images/jawa3.jpg"
     ],
-    topNotes: "Cinnamon, Cardamom, Grapefruit",
-    middleNotes: "Lavender",
-    baseNotes: "Licorice, Sandalwood, Amber, Patchouli, Vetiver",
-    description: "Jawa is a charismatic aromatic fragrance crafted for men who prefer a confident and distinctive scent. Cinnamon, cardamom, and grapefruit create a spicy and energetic opening, while lavender adds a clean and refined balance. Licorice, sandalwood, amber, patchouli, and vetiver complete the perfume with a deep and masculine finish."
+    topNotes: "Tarçın, Kakule, Greyfurt",
+middleNotes: "Lavanta",
+baseNotes: "Meyan Kökü, Sandal Ağacı, Amber, Paçuli, Vetiver",
+description: "Jawa, kendinden emin ve karakteristik kokuları tercih eden erkekler için tasarlanmış aromatik bir parfümdür. Tarçın, kakule ve greyfurtun baharatlı ve enerjik açılışı lavantanın temiz dokusuyla dengelenir. Meyan kökü, sandal ağacı, amber, paçuli ve vetiver notaları ise kokuya derin, sıcak ve maskülen bir bitiş kazandırır."
   }
 ];
 
 const productsContainer = document.getElementById("productsContainer");
-const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
 const scentFilter = document.getElementById("scentFilter");
 const priceFilter = document.getElementById("priceFilter");
@@ -125,7 +123,7 @@ function displayProducts(productList) {
   productsContainer.innerHTML = "";
 
   if (productList.length === 0) {
-    productsContainer.innerHTML = `<p class="no-products">No products found.</p>`;
+    productsContainer.innerHTML = `<p class="no-products">Ürün bulunamadı.</p>`;
     return;
   }
 
@@ -144,18 +142,10 @@ function displayProducts(productList) {
         <p class="price">₺${product.price}</p>
 
         <div class="product-buttons">
-  <button onclick="viewDetails(${product.id})">
-    View Details
-  </button>
-
-  <button class="cart-btn" data-id="${product.id}">
-    Add to Cart
-  </button>
-
-  <button onclick="favoriyeEkle(${product.id})">
-    ❤️
-  </button>
-</div>
+          <button onclick="viewDetails(${product.id})">View Details</button>
+          <button class="cart-btn" data-id="${product.id}">Add to Cart</button>
+        </div>
+      </div>
     `;
 
     productsContainer.appendChild(productCard);
@@ -163,13 +153,13 @@ function displayProducts(productList) {
 }
 
 function filterProducts() {
-  const searchValue = searchInput.value.toLowerCase();
+  
   const selectedCategory = categoryFilter.value;
   const selectedScent = scentFilter.value;
   const selectedPrice = priceFilter.value;
 
   const filteredProducts = products.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchValue);
+    
 
     const matchesCategory =
       selectedCategory === "all" || product.category === selectedCategory;
@@ -187,7 +177,7 @@ function filterProducts() {
       matchesPrice = product.price > 1650;
     }
 
-    return matchesSearch && matchesCategory && matchesScent && matchesPrice;
+    return matchesCategory && matchesScent && matchesPrice;
   });
 
   displayProducts(filteredProducts);
@@ -198,7 +188,7 @@ function viewDetails(productId) {
   window.location.href = "product-detail.html";
 }
 
-searchInput.addEventListener("input", filterProducts);
+
 categoryFilter.addEventListener("change", filterProducts);
 scentFilter.addEventListener("change", filterProducts);
 priceFilter.addEventListener("change", filterProducts);
