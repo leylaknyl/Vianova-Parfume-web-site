@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vianova | Products</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
 
@@ -13,50 +13,52 @@
       <a href="index.html" class="products-logo">VIANOVA</a>
 
       <div class="products-nav-links">
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="quiz.html">Scent Quiz</a>
-        <a href="favorites.html">Favorites</a>
-        <a href="cart.html">Cart</a>
-      </div>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="products.html">Ürünler</a>
+  <a href="quiz.html">Koku Testi</a>
+</div>
     </nav>
   </header>
 
   <section class="products-hero">
-    <h1>Discover Our Niche Perfumes</h1>
-    <p>Explore elegant fragrances crafted for women and men.</p>
+    <h1>Niş Parfüm Koleksiyonumuzu Keşfedin</h1>
+<p>Kadın ve erkek koleksiyonları için tasarlanmış zarif kokuları inceleyin.</p>
   </section>
 
   <section class="filter-section">
     <input type="text" id="searchInput" placeholder="Search perfume..." />
 
     <select id="categoryFilter">
-      <option value="all">All Categories</option>
-      <option value="Women">Women</option>
-      <option value="Men">Men</option>
-    </select>
+<section class="filter-section">
+  <input type="text" id="searchInput" placeholder="Parfüm ara..." />
 
-    <select id="scentFilter">
-      <option value="all">All Scents</option>
-      <option value="Oriental">Oriental</option>
-      <option value="Floral">Floral</option>
-      <option value="Fruity">Fruity</option>
-      <option value="Spicy">Spicy</option>
-      <option value="Aromatic">Aromatic</option>
-    </select>
+  <select id="categoryFilter">
+    <option value="all">Tüm Kategoriler</option>
+    <option value="Women">Kadın</option>
+    <option value="Men">Erkek</option>
+  </select>
 
-    <select id="priceFilter">
-      <option value="all">All Prices</option>
-      <option value="low">Under ₺1600</option>
-      <option value="mid">₺1600 - ₺1650</option>
-      <option value="high">Over ₺1650</option>
-    </select>
-  </section>
+  <select id="scentFilter">
+    <option value="all">Tüm Koku Türleri</option>
+    <option value="Oriental">Oryantal</option>
+    <option value="Floral">Çiçeksi</option>
+    <option value="Fruity">Meyveli</option>
+    <option value="Spicy">Baharatlı</option>
+    <option value="Aromatic">Aromatik</option>
+  </select>
+
+  <select id="priceFilter">
+    <option value="all">Tüm Fiyatlar</option>
+    <option value="low">₺1600 Altı</option>
+    <option value="mid">₺1600 - ₺1650</option>
+    <option value="high">₺1650 Üzeri</option>
+  </select>
+</section>
 
   <main class="products-container" id="productsContainer">
     <!-- Products will be displayed here with JavaScript -->
   </main>
 
-  <script src="products.js"></script>
+ <script src="../js/products.js"></script>
 </body>
 </html>
