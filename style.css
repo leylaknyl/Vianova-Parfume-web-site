@@ -353,6 +353,29 @@ body{
         padding-left:0;
     }
 }
+.hero-overlay h1{
+    animation:fadeUp 1.5s ease;
+}
+
+.hero-overlay p{
+    animation:fadeUp 2s ease;
+}
+
+.hero-overlay button{
+    animation:fadeUp 2.5s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
  
 
