@@ -558,7 +558,7 @@ body{
     font-size: 32px;
   }
 }
-<<<<<<< HEAD
+ HEAD
 
 
 
@@ -719,7 +719,7 @@ body{
   .detail-info h1 {
     font-size: 36px;
   }
-=======
+
 .quiz-popup {
     position: fixed;
     top: 120px;
@@ -767,5 +767,5 @@ body{
     padding: 15px;
     background: #f7dede;
     border-radius: 12px;
->>>>>>> 23d941eb94d07cecc83b9c49a5edab06c6f83399
-}
+
+} }
