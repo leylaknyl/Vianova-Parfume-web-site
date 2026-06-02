@@ -363,3 +363,164 @@ body{
     font-size: 32px;
   }
 }
+
+
+
+/* PRODUCT DETAIL PAGE */
+
+.detail-page {
+  width: 90%;
+  margin: 40px auto 80px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: #d46a92;
+  font-weight: bold;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: start;
+}
+
+.detail-images {
+  width: 100%;
+}
+
+.main-detail-img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.thumbnail-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 18px;
+}
+
+.thumbnail-row img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.thumbnail-row img:hover {
+  border-color: #d46a92;
+  transform: scale(1.04);
+}
+
+.detail-info h1 {
+  font-size: 46px;
+  color: #2b1d18;
+  margin: 14px 0 8px;
+}
+
+.detail-brand,
+.detail-scent {
+  color: #7b6b63;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.detail-price {
+  font-size: 30px;
+  font-weight: bold;
+  color: #d46a92;
+  margin: 18px 0;
+}
+
+.detail-description {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #4f433e;
+  margin-bottom: 28px;
+}
+
+.notes-box {
+  background-color: #fff5f8;
+  padding: 25px;
+  border-radius: 18px;
+  margin-bottom: 28px;
+}
+
+.notes-box h3 {
+  color: #2b1d18;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.note-item {
+  margin-bottom: 14px;
+  color: #5c4a43;
+  line-height: 1.5;
+}
+
+.note-item strong {
+  display: block;
+  color: #2b1d18;
+  margin-bottom: 4px;
+}
+
+.detail-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.detail-buttons button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background-color: #2b1d18;
+  transition: 0.3s;
+}
+
+.detail-buttons button:hover {
+  background-color: #d46a92;
+}
+
+.favorite-btn {
+  background-color: #d46a92 !important;
+}
+
+.favorite-btn:hover {
+  background-color: #2b1d18 !important;
+}
+
+.detail-error {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.detail-error a {
+  color: #d46a92;
+  font-weight: bold;
+}
+
+@media (max-width: 850px) {
+  .detail-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-detail-img {
+    height: 430px;
+  }
+
+  .detail-info h1 {
+    font-size: 36px;
+  }
+}
