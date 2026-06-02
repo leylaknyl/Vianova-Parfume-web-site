@@ -5,11 +5,12 @@ const showResultBtn = document.getElementById("showResultBtn");
 const quizResult = document.getElementById("quizResult");
 
 openQuizBtn.addEventListener("click", function () {
-    quizModal.style.display = "block";
+    quizModal.classList.add("active");
+    openQuizBtn.parentElement.style.display = "none";
 });
 
 closeQuizBtn.addEventListener("click", function () {
-    quizModal.style.display = "none";
+    quizModal.classList.remove("active");
 });
 
 showResultBtn.addEventListener("click", function () {
