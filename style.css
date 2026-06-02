@@ -286,7 +286,7 @@ body {
   padding-left: 120px;
 }
 
-<<<<<<< HEAD
+
 .footer-section h3 {
   color: var(--gold);
   margin-bottom: 20px;
@@ -297,7 +297,7 @@ body {
   color: white;
   line-height: 1.8;
   font-size: 16px;
-=======
+
 .footer-section h3{
     color:#d8b36a;
     margin-bottom:20px;
@@ -308,7 +308,7 @@ body {
     color:#f7f2eb;
     line-height:1.8;
     font-size:16px;
->>>>>>> 2f76c2bd1885f87b7b678e6ae5a0c3c68ffab7b7
+
 }
 
 .footer-section i {
@@ -1110,4 +1110,4 @@ body {
   background: var(--burgundy);
   color: white;
   border-radius: 12px;
-}
+} } 
