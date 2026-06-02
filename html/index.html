@@ -9,8 +9,6 @@
 </head>
 
 <body>
-
-
     <div class="quiz-popup">
     <p class="quiz-title">Size uygun olan parfümü öğrenmek ister misiniz?</p>
     <button id="openQuizBtn">Teste Başla</button>
@@ -23,7 +21,20 @@
         <h2>Hemen Öğrenelim</h2>
 
         <form id="quizForm">
-            <h3>1. Hangi koku tarzını tercih edersiniz?</h3>
+
+            <h3>1. Cinsiyetiniz nedir?</h3>
+
+            <label class="quiz-option">
+                <input type="radio" name="cinsiyet" value="Kadin">
+                <span>Kadın</span>
+            </label>
+
+            <label class="quiz-option">
+                <input type="radio" name="cinsiyet" value="Erkek">
+                <span>Erkek</span>
+            </label>
+
+            <h3>2. Hangi koku tarzını tercih edersiniz?</h3>
 
             <label class="quiz-option">
                 <input type="radio" name="soru1" value="A">
@@ -40,7 +51,7 @@
                 <span>Amber Oryantal Sıcak</span>
             </label>
 
-            <h3>2. Parfümünüz size nasıl hissettirmeli?</h3>
+            <h3>3. Parfümünüz size nasıl hissettirmeli?</h3>
 
             <label class="quiz-option">
                 <input type="radio" name="soru2" value="A">
@@ -57,7 +68,7 @@
                 <span>Çekici ve Gizemli</span>
             </label>
 
-            <h3>3. Parfümü en çok nerede kullanacaksınız?</h3>
+            <h3>4. Parfümü en çok nerede kullanacaksınız?</h3>
 
             <label class="quiz-option">
                 <input type="radio" name="soru3" value="A">
@@ -80,6 +91,9 @@
         <div id="quizResult"></div>
     </div>
 </div>
+
+
+    
     <header class="top-header">
 
     <div class="top-links">
@@ -118,11 +132,10 @@
 
     <section class="hero-banner">
 
-<<<<<<< HEAD
     <img src="..//images/hero-banner.jpeg" alt="Vianova Perfume Collection">
-=======
+
     <img src="../images/hero-banner.jpeg" alt="Vianova Perfume Collection">
->>>>>>> 9671441d7d1894508b7bee79e4f5cffcb60d721c
+
 
     <div class="hero-overlay">
         <h1>Luxury Niche Perfumes</h1>
