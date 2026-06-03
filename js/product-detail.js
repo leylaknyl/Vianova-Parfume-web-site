@@ -1,5 +1,6 @@
 const detailContainer = document.getElementById("detailContainer");
-const selectedProductId = localStorage.getItem("selectedProductId");
+const params = new URLSearchParams(window.location.search);
+const selectedProductId = params.get("id");
 
 const selectedProduct = products.find(product => product.id == selectedProductId);
 

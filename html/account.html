@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vianova | Üyelik</title>
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="account-page">
+
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="top-strip-right">
+        <a href="#">Mağazalar</a>
+        <a href="#">İletişim</a>
+      </div>
+    </div>
+
+    <div class="main-header product-header-main">
+      <div class="logo-area">
+        <a href="index.html">
+          <img src="../images/vianovalogo.png" alt="Vianova Logo" class="site-logo">
+        </a>
+      </div>
+
+      <div class="search-area">
+        <input type="text" placeholder="Vianova K" class="header-search">
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <div class="header-icons">
+        <a href="account.html" class="account-icon">
+          <i class="fa-regular fa-user"></i>
+        </a>
+
+        <a href="favorites.html" class="favorite-link">
+          <i class="fa-regular fa-heart"></i>
+          <span>Favoriler</span>
+        </a>
+
+        <a href="cart.html" class="cart-link">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="account-main">
+    <section class="account-card">
+      <div class="account-left">
+        <h1>Vianova’ya Hoş Geldiniz</h1>
+        <p>Favori kokularınızı kaydedin, koleksiyonunuzu keşfedin ve kişisel parfüm deneyiminizi oluşturun.</p>
+      </div>
+
+      <div class="account-form-box">
+        <div class="account-tabs">
+          <button class="tab-btn active" data-tab="login">Giriş Yap</button>
+          <button class="tab-btn" data-tab="register">Üye Ol</button>
+        </div>
+
+        <form id="loginForm" class="account-form active">
+          <h2>Giriş Yap</h2>
+
+          <label for="loginEmail">E-posta</label>
+          <input type="email" id="loginEmail" placeholder="E-posta adresiniz" required>
+
+          <label for="loginPassword">Şifre</label>
+          <input type="password" id="loginPassword" placeholder="Şifreniz" required>
+
+          <button type="submit" class="account-submit">Giriş Yap</button>
+          <p class="form-message" id="loginMessage"></p>
+        </form>
+
+        <form id="registerForm" class="account-form">
+          <h2>Üye Ol</h2>
+
+          <label for="registerName">Ad Soyad</label>
+          <input type="text" id="registerName" placeholder="Adınız ve soyadınız" required>
+
+          <label for="registerEmail">E-posta</label>
+          <input type="email" id="registerEmail" placeholder="E-posta adresiniz" required>
+
+          <label for="registerPassword">Şifre</label>
+          <input type="password" id="registerPassword" placeholder="En az 6 karakter" required>
+
+          <button type="submit" class="account-submit">Üyeliği Oluştur</button>
+          <p class="form-message" id="registerMessage"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/account.js"></script>
+</body>
+</html>
