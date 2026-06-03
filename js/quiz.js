@@ -5,8 +5,11 @@ const showResultBtn = document.getElementById("showResultBtn");
 const quizResult = document.getElementById("quizResult");
 
 openQuizBtn.addEventListener("click", function () {
+
+    document.querySelector(".quiz-popup").style.display = "none";
+
     quizModal.classList.add("active");
-    openQuizBtn.parentElement.style.display = "none";
+
 });
 
 closeQuizBtn.addEventListener("click", function () {
@@ -64,3 +67,16 @@ showResultBtn.addEventListener("click", function () {
         }
     }
 });
+// Sayfa açıldıktan 5 saniye sonra göster
+setTimeout(() => {
+
+    document.querySelector(".quiz-popup").style.display = "block";
+
+    // 40 saniye sonra otomatik kapat
+    setTimeout(() => {
+
+        document.querySelector(".quiz-popup").style.display = "none";
+
+    }, 40000);
+
+}, 5000);
