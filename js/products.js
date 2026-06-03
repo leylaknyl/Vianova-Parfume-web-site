@@ -142,10 +142,8 @@ function displayProducts(productList) {
         <p class="price">₺${product.price}</p>
 
         <div class="product-buttons">
-
-          <button onclick="viewDetails(${product.id})">Detayları Gör</button>
-          
-        </div>
+  <button type="button" class="details-btn" data-id="${product.id}">Detayları Gör</button>
+</div>
 
         <button onclick="viewDetails(${product.id})">Detayları Gör</button>
 
@@ -209,6 +207,18 @@ scentFilter.addEventListener("change", filterProducts);
 priceFilter.addEventListener("change", filterProducts);
 
 displayProducts(products);
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+if(category === "kadin"){
+  categoryFilter.value = "Kadın";
+  filterProducts();
+}
+
+if(category === "erkek"){
+  categoryFilter.value = "Erkek";
+  filterProducts();
+}
 
 function favoriyeEkle(productId) {
   const secilenUrun = products.find(product => product.id === productId);
@@ -229,3 +239,25 @@ function favoriyeEkle(productId) {
   alert(secilenUrun.name + " favorilere eklendi.");
 
 } }
+
+function openProductDetail(productId) {
+  localStorage.setItem("selectedProductId", productId);
+  window.location.href = "product-detail.html";
+}
+
+if (productsContainer) {
+  categoryFilter.addEventListener("change", filterProducts);
+  scentFilter.addEventListener("change", filterProducts);
+  priceFilter.addEventListener("change", filterProducts);
+
+  productsContainer.addEventListener("click", function (event) {
+    const detailButton = event.target.closest(".details-btn");
+
+    if (detailButton) {
+      const productId = detailButton.dataset.id;
+      openProductDetail(productId);
+    }
+  });
+
+  displayProducts(products);
+}
