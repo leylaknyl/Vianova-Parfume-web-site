@@ -2263,6 +2263,21 @@ body {
     padding: 35px 25px;
   }
 }
+.detail-btn{
+    display:inline-block;
+    margin-bottom:25px;
+    padding:12px 30px;
+    border:none;
+    background:var(--burgundy);
+    color:white;
+    border-radius:30px;
+    cursor:pointer;
+    text-decoration:none;
+}
 
+.detail-btn:hover{
+    background:var(--dark-burgundy);
+    color:var(--gold);
+}
 
 
