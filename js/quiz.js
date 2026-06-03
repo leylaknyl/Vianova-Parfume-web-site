@@ -5,19 +5,21 @@ const showResultBtn = document.getElementById("showResultBtn");
 const quizResult = document.getElementById("quizResult");
 
 openQuizBtn.addEventListener("click", function () {
-    quizModal.style.display = "block";
+    quizModal.classList.add("active");
+    openQuizBtn.parentElement.style.display = "none";
 });
 
 closeQuizBtn.addEventListener("click", function () {
-    quizModal.style.display = "none";
+    quizModal.classList.remove("active");
 });
 
 showResultBtn.addEventListener("click", function () {
+    const cinsiyet = document.querySelector('input[name="cinsiyet"]:checked');
     const cevap1 = document.querySelector('input[name="soru1"]:checked');
     const cevap2 = document.querySelector('input[name="soru2"]:checked');
     const cevap3 = document.querySelector('input[name="soru3"]:checked');
 
-    if (!cevap1 || !cevap2 || !cevap3) {
+    if (!cinsiyet || !cevap1 || !cevap2 || !cevap3) {
         alert("Lütfen tüm soruları cevaplayınız.");
         return;
     }
@@ -38,26 +40,27 @@ showResultBtn.addEventListener("click", function () {
         }
     }
 
-    if (aSayisi >= bSayisi && aSayisi >= cSayisi) {
-        quizResult.innerHTML = `
-            <h3>Çiçeksi Meyvemsi Tatlı</h3>
-            <p>Size önerilen parfümler:</p>
-            <strong>The Time</strong><br>
-            <strong>Off Line</strong>
-        `;
-    } else if (bSayisi >= aSayisi && bSayisi >= cSayisi) {
-        quizResult.innerHTML = `
-            <h3>Odunsu Baharatlı Güçlü</h3>
-            <p>Size önerilen parfümler:</p>
-            <strong>Chaos</strong><br>
-            <strong>Jawa</strong>
-        `;
+    if (cinsiyet.value === "Kadin") {
+        if (aSayisi >= cSayisi) {
+            quizResult.innerHTML =
+                "<h3>Size önerilen parfümler:</h3>" +
+                "<strong>The Time</strong><br>" +
+                "<strong>Off Line</strong>";
+        } else {
+            quizResult.innerHTML =
+                "<h3>Size önerilen parfüm:</h3>" +
+                "<strong>Radius</strong>";
+        }
     } else {
-        quizResult.innerHTML = `
-            <h3>Amber Oryantal Sıcak</h3>
-            <p>Size önerilen parfümler:</p>
-            <strong>Chrome</strong><br>
-            <strong>Radius</strong>
-        `;
+        if (bSayisi >= cSayisi) {
+            quizResult.innerHTML =
+                "<h3>Size önerilen parfümler:</h3>" +
+                "<strong>Chaos</strong><br>" +
+                "<strong>Jawa</strong>";
+        } else {
+            quizResult.innerHTML =
+                "<h3>Size önerilen parfüm:</h3>" +
+                "<strong>Chrome</strong>";
+        }
     }
 });
