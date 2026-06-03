@@ -2068,3 +2068,184 @@ body {
 .cart-link:hover {
   color: var(--burgundy);
 }
+
+/* FAVORİLER SAYFASI */
+
+.favorites-page {
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--light-cream), var(--cream));
+}
+
+.favorites-hero {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.heart-icon {
+  color: var(--gold);
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.favorites-hero h1 {
+  font-size: 44px;
+  color: var(--burgundy);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.favorites-count {
+  display: inline-block;
+  background: white;
+  color: var(--burgundy);
+  padding: 10px 25px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.favorites-container {
+  width: 92%;
+  margin: 0 auto 45px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+  justify-content: center;
+  gap: 35px;
+}
+
+.favorite-card {
+  background: white;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 6px solid var(--gold);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.favorite-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+.favorite-image-box {
+  position: relative;
+}
+
+.favorite-image-box img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  display: block;
+}
+
+.favorite-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: var(--burgundy);
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.18);
+}
+
+.favorite-info {
+  padding: 24px 20px 28px;
+  text-align: center;
+}
+
+.favorite-info h3 {
+  color: var(--burgundy);
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.favorite-info p {
+  color: #6f5b52;
+  margin: 6px 0;
+}
+
+.favorite-scent {
+  display: inline-block;
+  padding: 5px 16px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  font-size: 13px;
+  color: var(--burgundy);
+  margin-top: 8px;
+}
+
+.favorite-price {
+  display: block;
+  color: var(--gold);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 18px 0;
+}
+
+.favorite-info button,
+.clear-favorites-btn {
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.favorite-info button:hover,
+.clear-favorites-btn:hover {
+  background: var(--dark-burgundy);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.clear-favorites-btn {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--gold);
+}
+.favorite-btn{
+    width: 100%;
+
+    margin-top: 10px;
+
+    background: white;
+
+    color: var(--burgundy);
+
+    border: 2px solid var(--gold);
+
+    border-radius: 30px;
+
+    padding: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.favorite-btn:hover{
+    background: var(--burgundy);
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+.favorite-btn i{
+    margin-right: 8px;
+}

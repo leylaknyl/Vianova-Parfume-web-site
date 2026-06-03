@@ -9,14 +9,25 @@
   </head>
 
   <body>
-    <h1>Favori Parfümlerim</h1>
+   <section class="favorites-page">
 
-    <p id="favoriMesaj">Favoriler yükleniyor...</p>
+    <div class="favorites-hero">
+        <div class="heart-icon">♥</div>
 
-    <ul id="favoriListesi"></ul>
+        <h1>Favori Parfümlerim</h1>
 
-    <button id="favorileriTemizleBtn">Favorileri Temizle</button>
+        <p id="favoriMesaj" class="favorites-count">
+            Favoriler yükleniyor...
+        </p>
+    </div>
 
+    <div id="favoriListesi" class="favorites-container"></div>
+
+    <button id="favorileriTemizleBtn" class="clear-favorites-btn">
+        Favorileri Temizle
+    </button>
+
+</section>
     <script src="../js/favorites.js"></script>
   </body>
 </html>

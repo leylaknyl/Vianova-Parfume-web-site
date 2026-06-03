@@ -236,7 +236,7 @@ function favoriyeEkle(productId) {
 
   localStorage.setItem("favoriler", JSON.stringify(favoriler));
 
-  alert(secilenUrun.name + " favorilere eklendi.");
+ alert("♥ " + secilenUrun.name + " favori koleksiyonunuza eklendi.");
 
 } }
 
