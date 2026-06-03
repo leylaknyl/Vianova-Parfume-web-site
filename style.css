@@ -1930,4 +1930,161 @@ body {
 }
 
 
+:root{
+    --burgundy:#6b0f1a;
+    --dark-burgundy:#3d0710;
+    --gold:#c8a96a;
+    --cream:#f7f2eb;
+    --light-cream:#fbf8f3;
+    --text:#1e1e1e;
+    --soft-pink:#ead3dc;
+}
+
+.site-header{
+    width: 100%;
+    background: var(--light-cream);
+}
+
+.top-strip{
+    background: var(--burgundy);
+    color: white;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.top-strip-right{
+    display: flex;
+    gap: 30px;
+}
+
+.top-strip a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 48px;
+    background: var(--cream);
+    gap: 20px;
+}
+
+.logo-area{
+    flex-shrink: 0;
+}
+
+.site-logo{
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.search-area{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #d7c7c7;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 20px;
+}
+
+.header-search{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px 20px;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-btn{
+    border: none;
+    background: transparent;
+    padding: 0 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--burgundy);
+}
+
+.header-icons{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    font-size: 26px;
+    color: var(--text);
+}
+
+.main-nav{
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+    padding: 18px 20px;
+    background: var(--cream);
+    border-top: 1px solid #e4d9d9;
+}
+
+.main-nav a{
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.main-nav a:hover{
+    color: var(--burgundy);
+}
+
+
+/* HEADER ICONS SAME AS HOME */
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-icons i {
+  font-size: 28px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.header-icons a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.favorite-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.favorite-link span {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons i:hover,
+.favorite-link:hover,
+.cart-link:hover {
+  color: var(--burgundy);
+}
+
+
 
