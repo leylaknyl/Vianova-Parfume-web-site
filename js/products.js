@@ -8,6 +8,7 @@ const products = [
     category: "Kadın",
     scent: "Oriental",
     price: 1662,
+    rating: 4.5,
     images: [
       "../images/radius1.jpg",
       "../images/radius2.jpg",
@@ -27,6 +28,7 @@ description: "Radius, girdiği ortamda iz bırakmak isteyen kadınlar için tasa
     category: "Kadın",
     scent: "Floral",
     price: 1670,
+    rating: 4.7,
     images: [
       "../images/thetime1.jpg",
       "../images/thetime2.jpg",
@@ -46,6 +48,7 @@ description: "The Time, unutulmaz anların zarafetinden ilham alan çiçeksi ve 
     category: "Kadın",
     scent: "Fruity",
     price: 1650,
+    rating: 4.6,  
     images: [
       "../images/offline1.jpg",
       "../images/offline2.jpg",
@@ -65,6 +68,7 @@ description: "Off Line, enerjik ve modern kadınlar için tasarlanmış canlı b
     category: "Erkek",
     scent: "Spicy",
     price: 1585,
+    rating: 4.8,
     images: [
       "../images/chrome1.jpg",
       "../images/chrome2.jpg",
@@ -83,6 +87,7 @@ description: "Chrome, güçlü ve sofistike bir duruşa sahip erkekler için tas
     category: "Erkek",
     scent: "Aromatic",
     price: 1560,
+    rating: 4.9,
     images: [
       "../images/chaos1.jpg",
       "../images/chaos2.jpg",
@@ -102,6 +107,7 @@ description: "Chaos, ferahlık, zarafet ve maskülen enerjiyi bir araya getiren 
     category: "Erkek",
     scent: "Aromatic",
     price: 1560,
+    rating: 4.7,
     images: [
       "../images/jawa1.jpg",
       "../images/jawa2.jpg",
@@ -140,6 +146,7 @@ function displayProducts(productList) {
         <p class="brand">${product.brand} | ${product.type} | ${product.size}</p>
         <p class="scent">${product.scent}</p>
         <p class="price">₺${product.price}</p>
+       ${createStaticRatingHTML(product)}
 
         <div class="product-buttons">
   <button type="button" class="details-btn" data-id="${product.id}">Detayları Gör</button>
@@ -162,6 +169,28 @@ function displayProducts(productList) {
     productsContainer.appendChild(productCard);
   });
 }
+
+
+function createStaticRatingHTML(product) {
+  const rating = product.rating;
+  const roundedRating = Math.round(rating);
+  let starsHTML = "";
+
+  for (let i = 1; i <= 5; i++) {
+    starsHTML += `<span class="static-star ${i <= roundedRating ? "active" : ""}">★</span>`;
+  }
+
+  return `
+    <div class="rating-box static-rating">
+      <div class="rating-stars">
+        ${starsHTML}
+      </div>
+      <span class="rating-score">${rating.toFixed(1)} / 5</span>
+    </div>
+  `;
+}
+
+
 
 function filterProducts() {
   const selectedCategory = categoryFilter.value.trim();
@@ -242,7 +271,7 @@ function favoriyeEkle(productId) {
 
 function openProductDetail(productId) {
   localStorage.setItem("selectedProductId", productId);
-  window.location.href = "product-detail.html";
+  window.location.href = `product-detail.html?id=${productId}`;
 }
 
 if (productsContainer) {
@@ -251,13 +280,13 @@ if (productsContainer) {
   priceFilter.addEventListener("change", filterProducts);
 
   productsContainer.addEventListener("click", function (event) {
-    const detailButton = event.target.closest(".details-btn");
+  const detailButton = event.target.closest(".details-btn");
 
-    if (detailButton) {
-      const productId = detailButton.dataset.id;
-      openProductDetail(productId);
-    }
-  });
+  if (detailButton) {
+    const productId = detailButton.dataset.id;
+    openProductDetail(productId);
+  }
+});
 
   displayProducts(products);
 }
