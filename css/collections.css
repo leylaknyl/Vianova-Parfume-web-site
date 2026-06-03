@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f7f2eb;
+}
+
+.collection-hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.collection-hero video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.collection-hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+
+.collection-overlay{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
+}
+
+.collection-overlay h1{
+    font-size:64px;
+    color:#d8b36a;
+    margin-bottom:20px;
+}
+
+.collection-overlay p{
+    font-size:24px;
+}
+
+.collections{
+    padding:90px 70px;
+}
+
+.collection-card{
+    max-width:1200px;
+    margin:0 auto 90px;
+    display:flex;
+    align-items:center;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+.collection-card img{
+    width:55%;
+    height:520px;
+    object-fit:cover;
+}
+
+.collection-text{
+    width:45%;
+    padding:60px;
+}
+
+.collection-text span{
+    color:#c8a96a;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.collection-text h2{
+    color:#6b0f1a;
+    font-size:44px;
+    margin:15px 0;
+}
+
+.collection-text p{
+    color:#555;
+    font-size:19px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.collection-text a{
+    display:inline-block;
+    background:#6b0f1a;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.collection-text a:hover{
+    background:#c8a96a;
+    color:#6b0f1a;
+}
+
+.reverse{
+    flex-direction:row-reverse;
+}
+
+@media(max-width:768px){
+    .collection-overlay h1{
+        font-size:38px;
+    }
+
+    .collection-card,
+    .reverse{
+        flex-direction:column;
+    }
+
+    .collection-card img,
+    .collection-text{
+        width:100%;
+    }
+
+    .collections{
+        padding:50px 20px;
+    }
+}
