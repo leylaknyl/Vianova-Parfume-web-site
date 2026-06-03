@@ -209,6 +209,18 @@ scentFilter.addEventListener("change", filterProducts);
 priceFilter.addEventListener("change", filterProducts);
 
 displayProducts(products);
+const params = new URLSearchParams(window.location.search);
+const category = params.get("category");
+
+if(category === "kadin"){
+  categoryFilter.value = "Kadın";
+  filterProducts();
+}
+
+if(category === "erkek"){
+  categoryFilter.value = "Erkek";
+  filterProducts();
+}
 
 function favoriyeEkle(productId) {
   const secilenUrun = products.find(product => product.id === productId);
