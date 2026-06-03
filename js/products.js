@@ -246,38 +246,83 @@ function filterProducts() {
   displayProducts(filteredProducts);
 }
 
-if (productsContainer) {
-  categoryFilter.addEventListener("change", filterProducts);
-  scentFilter.addEventListener("change", filterProducts);
-  priceFilter.addEventListener("change", filterProducts);
-
-  const params = new URLSearchParams(window.location.search);
-  const category = params.get("category");
-
-  if (category === "kadin") {
-    categoryFilter.value = "Kadın";
-    filterProducts();
-  }
-
-  if (category === "erkek") {
-    categoryFilter.value = "Erkek";
-    filterProducts();
-  }
-
-  /* =========================
-   FAVORİLERE EKLEME SİSTEMİ
+/* =========================
+   DETAY SAYFASINA GİTME
 ========================= */
-
-  function favoriyeEkle(productId) {
-    const secilenUrun = products.find((product) => product.id === productId);
-
-    let favoriler = JSON.parse(localStorage.getItem("favoriler")) || [];
-
 
 function openProductDetail(productId) {
   localStorage.setItem("selectedProductId", productId);
   window.location.href = `product-detail.html?id=${productId}`;
 }
+
+
+/* =========================
+   FAVORİLERE EKLEME SİSTEMİ
+========================= */
+
+function favoriyeEkle(productId) {
+  const secilenUrun = products.find((product) => product.id === productId);
+
+  if (!secilenUrun) {
+    alert("Ürün bulunamadı.");
+    return;
+  }
+
+  let favoriler = JSON.parse(localStorage.getItem("favoriler")) || [];
+
+  const zatenVarMi = favoriler.some((product) => product.id === productId);
+
+  if (zatenVarMi) {
+    alert("Bu ürün zaten favorilerinizde.");
+    return;
+  }
+
+  favoriler.push(secilenUrun);
+
+  localStorage.setItem("favoriler", JSON.stringify(favoriler));
+
+  alert("♥ " + secilenUrun.name + " favori koleksiyonunuza eklendi.");
+}
+
+
+/* =========================
+   SEPETE EKLEME SİSTEMİ
+========================= */
+
+function sepeteEkle(productId) {
+  const secilenUrun = products.find((product) => product.id === productId);
+
+  if (!secilenUrun) {
+    alert("Ürün bulunamadı.");
+    return;
+  }
+
+  let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+
+  const sepetteVarMi = sepet.find((product) => product.id === productId);
+
+  if (sepetteVarMi) {
+    sepetteVarMi.adet += 1;
+  } else {
+    secilenUrun.adet = 1;
+    sepet.push(secilenUrun);
+  }
+
+  localStorage.setItem("sepet", JSON.stringify(sepet));
+
+  alert("🛍 " + secilenUrun.name + " sepete eklendi.");
+}
+
+
+/* Inline onclick'lerin çalışması için global yapıyoruz */
+window.favoriyeEkle = favoriyeEkle;
+window.sepeteEkle = sepeteEkle;
+window.openProductDetail = openProductDetail;
+
+
+/* =========================
+   SAYFA BAŞLANGICI VE EVENTLER
+========================= */
 
 if (productsContainer) {
   categoryFilter.addEventListener("change", filterProducts);
@@ -285,87 +330,24 @@ if (productsContainer) {
   priceFilter.addEventListener("change", filterProducts);
 
   productsContainer.addEventListener("click", function (event) {
-  const detailButton = event.target.closest(".details-btn");
+    const detailButton = event.target.closest(".details-btn");
 
-  if (detailButton) {
-    const productId = detailButton.dataset.id;
-    openProductDetail(productId);
-  }
-});
-
-    const zatenVarMi = favoriler.some((product) => product.id === productId);
-
-    if (zatenVarMi) {
-      alert("Bu ürün zaten favorilerinizde.");
-      return;
+    if (detailButton) {
+      const productId = detailButton.dataset.id;
+      openProductDetail(productId);
     }
+  });
 
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
 
-    favoriler.push(secilenUrun);
-
-    localStorage.setItem("favoriler", JSON.stringify(favoriler));
-
-    alert("♥ " + secilenUrun.name + " favori koleksiyonunuza eklendi.");
-  }
-
-  function openProductDetail(productId) {
-    localStorage.setItem("selectedProductId", productId);
-    window.location.href = "product-detail.html";
-  }
-
-  if (productsContainer) {
-    categoryFilter.addEventListener("change", filterProducts);
-    scentFilter.addEventListener("change", filterProducts);
-    priceFilter.addEventListener("change", filterProducts);
-
-    productsContainer.addEventListener("click", function (event) {
-      const detailButton = event.target.closest(".details-btn");
-
-      if (detailButton) {
-        const productId = detailButton.dataset.id;
-        openProductDetail(productId);
-      }
-    });
+  if (category === "kadin") {
+    categoryFilter.value = "Kadın";
+    filterProducts();
+  } else if (category === "erkek") {
+    categoryFilter.value = "Erkek";
+    filterProducts();
+  } else {
     displayProducts(products);
   }
 }
-/* =========================
-   SEPETE EKLEME SİSTEMİ
-========================= */
-
-function sepeteEkle(productId) {
-
-  const secilenUrun = products.find(
-    product => product.id === productId
-  );
-
-  let sepet = JSON.parse(
-    localStorage.getItem("sepet")
-  ) || [];
-
-  const sepetteVarMi = sepet.find(
-    product => product.id === productId
-  );
-
-  if (sepetteVarMi) {
-
-    sepetteVarMi.adet += 1;
-
-  } else {
-
-    secilenUrun.adet = 1;
-
-    sepet.push(secilenUrun);
-  }
-
-  localStorage.setItem(
-    "sepet",
-    JSON.stringify(sepet)
-  );
-
-  alert(
-    "🛍 " +
-    secilenUrun.name +
-    " sepete eklendi."
-  );
-} }
