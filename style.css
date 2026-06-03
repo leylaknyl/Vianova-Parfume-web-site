@@ -2627,3 +2627,174 @@ body {
   background: #a43745;
   color: white;
 }
+/* HEADER SEPET LİNKİ */
+
+.cart-link {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cart-link:hover {
+  color: var(--burgundy);
+  transform: scale(1.15);
+}
+/* SEPET SAYFASI */
+
+.cart-page {
+  min-height: 100vh;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, var(--light-cream), var(--cream));
+}
+
+.cart-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cart-hero h1 {
+  font-size: 48px;
+  color: var(--burgundy);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.cart-hero p {
+  display: inline-block;
+  background: white;
+  color: var(--burgundy);
+  padding: 10px 25px;
+  border: 1px solid var(--gold);
+  border-radius: 30px;
+  font-weight: 600;
+}
+ 
+.cart-container h3 {
+  color: var(--burgundy);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cart-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cart-container button {
+  margin: 8px 5px 0 0;
+  background: var(--burgundy);
+  color: white;
+  border: 2px solid var(--gold);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-container button:hover {
+  background: var(--dark-burgundy);
+  color: var(--gold);
+}
+
+.cart-summary {
+  width: 90%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: white;
+  border: 3px solid var(--gold);
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.cart-summary h2 {
+  color: var(--burgundy);
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+#toplamFiyat {
+  color: var(--gold);
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+#sepetiTemizleBtn {
+  background: var(--burgundy);
+  color: white;
+  border: 2px solid var(--gold);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#sepetiTemizleBtn:hover {
+  background: var(--dark-burgundy);
+  color: var(--gold);
+}
+
+.cart-product-img {
+  width:95px;
+    height:95px;
+    object-fit:cover;
+    border-radius:15px;
+    border:2px solid var(--gold);
+   flex-shrink:0;
+  margin-right:10px;  /* yazıya yaklaştırır */
+   margin-top:-5px;   /* biraz yukarı çıkarır */
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align: left;
+}
+.cart-actions {
+  display:flex;
+  gap:10px;
+  margin-top:12px;
+}
+
+.cart-item {
+  width: 100%;
+  max-width: 650px;
+  min-height: 130px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 8px;
+  border: 3px solid var(--gold);
+  border-radius: 22px;
+  padding: 20px 30px;
+}
+.old-total {
+  display: block;
+  color: #777;
+  text-decoration: line-through;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.campaign-text {
+  display: block;
+  color: var(--burgundy);
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.new-total {
+  display: block;
+  color: var(--gold);
+  font-size: 34px;
+  font-weight: bold;
+}

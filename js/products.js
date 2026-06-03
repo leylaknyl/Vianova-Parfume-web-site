@@ -136,6 +136,11 @@ function displayProducts(productList) {
     return;
   }
 
+  /* =========================
+   ÜRÜN KARTI BUTONLARI
+========================= */
+
+
   productList.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
@@ -164,7 +169,7 @@ function displayProducts(productList) {
 
           </div>
 
-          <button class="cart-btn" data-id="${product.id}">
+          <button class="cart-btn" onclick="sepeteEkle(${product.id})">
             <i class="fa-solid fa-bag-shopping"></i>
             Sepete Ekle
           </button>
@@ -174,6 +179,10 @@ function displayProducts(productList) {
     productsContainer.appendChild(productCard);
   });
 }
+
+/* =========================
+   ÜRÜN FİLTRELEME SİSTEMİ
+========================= */
 
 function filterProducts() {
   const selectedCategory = categoryFilter.value.trim();
@@ -224,6 +233,10 @@ if (productsContainer) {
     filterProducts();
   }
 
+  /* =========================
+   FAVORİLERE EKLEME SİSTEMİ
+========================= */
+
   function favoriyeEkle(productId) {
     const secilenUrun = products.find((product) => product.id === productId);
 
@@ -263,4 +276,44 @@ if (productsContainer) {
     });
     displayProducts(products);
   }
+}
+/* =========================
+   SEPETE EKLEME SİSTEMİ
+========================= */
+
+function sepeteEkle(productId) {
+
+  const secilenUrun = products.find(
+    product => product.id === productId
+  );
+
+  let sepet = JSON.parse(
+    localStorage.getItem("sepet")
+  ) || [];
+
+  const sepetteVarMi = sepet.find(
+    product => product.id === productId
+  );
+
+  if (sepetteVarMi) {
+
+    sepetteVarMi.adet += 1;
+
+  } else {
+
+    secilenUrun.adet = 1;
+
+    sepet.push(secilenUrun);
+  }
+
+  localStorage.setItem(
+    "sepet",
+    JSON.stringify(sepet)
+  );
+
+  alert(
+    "🛍 " +
+    secilenUrun.name +
+    " sepete eklendi."
+  );
 }

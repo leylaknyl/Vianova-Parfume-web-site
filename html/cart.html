@@ -1,28 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepetim | Vianova</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepet | Vianova</title>
-</head>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <section class="cart-page">
+      <div class="cart-hero">
+        <h1>Sepetim</h1>
+        <p id="mesaj">Sepet yükleniyor...</p>
+      </div>
 
-<body>
+      <div id="sepetListesi" class="cart-container"></div>
 
-    <h1>Alışveriş Sepeti</h1>
+      <div class="cart-summary">
+        <h2>Toplam Tutar</h2>
+        <p id="toplamFiyat">₺0</p>
 
-    <p id="mesaj">Sepet yükleniyor...</p>
+        <button id="sepetiTemizleBtn">Sepeti Temizle</button>
+      </div>
+    </section>
 
-    <ul id="sepetListesi"></ul>
-
-    <p id="toplamFiyat">Toplam: 0 TL</p>
-
-    <button id="sepetiTemizleBtn">
-        Sepeti Temizle
-    </button>
-
-    <script src="js/cart.js"></script>
-
-</body>
-
+    <script src="../js/cart.js"></script>
+  </body>
 </html>
