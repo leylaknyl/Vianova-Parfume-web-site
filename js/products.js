@@ -8,6 +8,7 @@ const products = [
     category: "Kadın",
     scent: "Oriental",
     price: 1662,
+    rating: 4.5,
     images: [
       "../images/radius1.jpg",
       "../images/radius2.jpg",
@@ -28,6 +29,7 @@ const products = [
     category: "Kadın",
     scent: "Floral",
     price: 1670,
+    rating: 4.7,
     images: [
       "../images/thetime1.jpg",
       "../images/thetime2.jpg",
@@ -49,6 +51,7 @@ const products = [
     category: "Kadın",
     scent: "Fruity",
     price: 1650,
+    rating: 4.6,  
     images: [
       "../images/offline1.jpg",
       "../images/offline2.jpg",
@@ -70,6 +73,7 @@ const products = [
     category: "Erkek",
     scent: "Spicy",
     price: 1585,
+    rating: 4.8,
     images: [
       "../images/chrome1.jpg",
       "../images/chrome2.jpg",
@@ -90,6 +94,7 @@ const products = [
     category: "Erkek",
     scent: "Aromatic",
     price: 1560,
+    rating: 4.9,
     images: [
       "../images/chaos1.jpg",
       "../images/chaos2.jpg",
@@ -110,6 +115,7 @@ const products = [
     category: "Erkek",
     scent: "Aromatic",
     price: 1560,
+    rating: 4.7,
     images: [
       "../images/jawa1.jpg",
       "../images/jawa2.jpg",
@@ -154,6 +160,7 @@ function displayProducts(productList) {
         <p class="brand">${product.brand} | ${product.type} | ${product.size}</p>
         <p class="scent">${product.scent}</p>
         <p class="price">₺${product.price}</p>
+       ${createStaticRatingHTML(product)}
 
                <div class="product-buttons">
           <div class="top-product-buttons">
@@ -180,9 +187,33 @@ function displayProducts(productList) {
   });
 }
 
+
+
+function createStaticRatingHTML(product) {
+  const rating = product.rating;
+  const roundedRating = Math.round(rating);
+  let starsHTML = "";
+
+  for (let i = 1; i <= 5; i++) {
+    starsHTML += `<span class="static-star ${i <= roundedRating ? "active" : ""}">★</span>`;
+  }
+
+  return `
+    <div class="rating-box static-rating">
+      <div class="rating-stars">
+        ${starsHTML}
+      </div>
+      <span class="rating-score">${rating.toFixed(1)} / 5</span>
+    </div>
+  `;
+}
+
+
+
 /* =========================
    ÜRÜN FİLTRELEME SİSTEMİ
 ========================= */
+
 
 function filterProducts() {
   const selectedCategory = categoryFilter.value.trim();
@@ -215,10 +246,97 @@ function filterProducts() {
   displayProducts(filteredProducts);
 }
 
+/* =========================
+   DETAY SAYFASINA GİTME
+========================= */
+
+function openProductDetail(productId) {
+  localStorage.setItem("selectedProductId", productId);
+  window.location.href = `product-detail.html?id=${productId}`;
+}
+
+
+/* =========================
+   FAVORİLERE EKLEME SİSTEMİ
+========================= */
+
+function favoriyeEkle(productId) {
+  const secilenUrun = products.find((product) => product.id === productId);
+
+  if (!secilenUrun) {
+    alert("Ürün bulunamadı.");
+    return;
+  }
+
+  let favoriler = JSON.parse(localStorage.getItem("favoriler")) || [];
+
+  const zatenVarMi = favoriler.some((product) => product.id === productId);
+
+  if (zatenVarMi) {
+    alert("Bu ürün zaten favorilerinizde.");
+    return;
+  }
+
+  favoriler.push(secilenUrun);
+
+  localStorage.setItem("favoriler", JSON.stringify(favoriler));
+
+  alert("♥ " + secilenUrun.name + " favori koleksiyonunuza eklendi.");
+}
+
+
+/* =========================
+   SEPETE EKLEME SİSTEMİ
+========================= */
+
+function sepeteEkle(productId) {
+  const secilenUrun = products.find((product) => product.id === productId);
+
+  if (!secilenUrun) {
+    alert("Ürün bulunamadı.");
+    return;
+  }
+
+  let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+
+  const sepetteVarMi = sepet.find((product) => product.id === productId);
+
+  if (sepetteVarMi) {
+    sepetteVarMi.adet += 1;
+  } else {
+    secilenUrun.adet = 1;
+    sepet.push(secilenUrun);
+  }
+
+  localStorage.setItem("sepet", JSON.stringify(sepet));
+
+  alert("🛍 " + secilenUrun.name + " sepete eklendi.");
+}
+
+
+/* Inline onclick'lerin çalışması için global yapıyoruz */
+window.favoriyeEkle = favoriyeEkle;
+window.sepeteEkle = sepeteEkle;
+window.openProductDetail = openProductDetail;
+
+
+/* =========================
+   SAYFA BAŞLANGICI VE EVENTLER
+========================= */
+
 if (productsContainer) {
   categoryFilter.addEventListener("change", filterProducts);
   scentFilter.addEventListener("change", filterProducts);
   priceFilter.addEventListener("change", filterProducts);
+
+  productsContainer.addEventListener("click", function (event) {
+    const detailButton = event.target.closest(".details-btn");
+
+    if (detailButton) {
+      const productId = detailButton.dataset.id;
+      openProductDetail(productId);
+    }
+  });
 
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category");
@@ -226,94 +344,10 @@ if (productsContainer) {
   if (category === "kadin") {
     categoryFilter.value = "Kadın";
     filterProducts();
-  }
-
-  if (category === "erkek") {
+  } else if (category === "erkek") {
     categoryFilter.value = "Erkek";
     filterProducts();
-  }
-
-  /* =========================
-   FAVORİLERE EKLEME SİSTEMİ
-========================= */
-
-  function favoriyeEkle(productId) {
-    const secilenUrun = products.find((product) => product.id === productId);
-
-    let favoriler = JSON.parse(localStorage.getItem("favoriler")) || [];
-
-    const zatenVarMi = favoriler.some((product) => product.id === productId);
-
-    if (zatenVarMi) {
-      alert("Bu ürün zaten favorilerinizde.");
-      return;
-    }
-
-    favoriler.push(secilenUrun);
-
-    localStorage.setItem("favoriler", JSON.stringify(favoriler));
-
-    alert("♥ " + secilenUrun.name + " favori koleksiyonunuza eklendi.");
-  }
-
-  function openProductDetail(productId) {
-    localStorage.setItem("selectedProductId", productId);
-    window.location.href = "product-detail.html";
-  }
-
-  if (productsContainer) {
-    categoryFilter.addEventListener("change", filterProducts);
-    scentFilter.addEventListener("change", filterProducts);
-    priceFilter.addEventListener("change", filterProducts);
-
-    productsContainer.addEventListener("click", function (event) {
-      const detailButton = event.target.closest(".details-btn");
-
-      if (detailButton) {
-        const productId = detailButton.dataset.id;
-        openProductDetail(productId);
-      }
-    });
+  } else {
     displayProducts(products);
   }
-}
-/* =========================
-   SEPETE EKLEME SİSTEMİ
-========================= */
-
-function sepeteEkle(productId) {
-
-  const secilenUrun = products.find(
-    product => product.id === productId
-  );
-
-  let sepet = JSON.parse(
-    localStorage.getItem("sepet")
-  ) || [];
-
-  const sepetteVarMi = sepet.find(
-    product => product.id === productId
-  );
-
-  if (sepetteVarMi) {
-
-    sepetteVarMi.adet += 1;
-
-  } else {
-
-    secilenUrun.adet = 1;
-
-    sepet.push(secilenUrun);
-  }
-
-  localStorage.setItem(
-    "sepet",
-    JSON.stringify(sepet)
-  );
-
-  alert(
-    "🛍 " +
-    secilenUrun.name +
-    " sepete eklendi."
-  );
 }
