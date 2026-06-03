@@ -47,9 +47,10 @@ function favorileriGoster() {
             ₺${favoriler[i].price}
         </span>
 
-        <button onclick="favoridenSil(${i})">
-            Favoriden Çıkar
-        </button>
+        <button class="favorite-btn" onclick="favoridenSil(${i})">
+    <i class="fa-solid fa-heart-crack"></i>
+    Favorilerden Çıkar
+</button>
 
     </div>
 

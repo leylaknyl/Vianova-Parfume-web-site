@@ -3,6 +3,7 @@ const closeQuizBtn = document.getElementById("closeQuizBtn");
 const quizModal = document.getElementById("quizModal");
 const showResultBtn = document.getElementById("showResultBtn");
 const quizResult = document.getElementById("quizResult");
+const quizPopup = document.querySelector(".quiz-popup");
 
 openQuizBtn.addEventListener("click", function () {
 
@@ -70,13 +71,10 @@ showResultBtn.addEventListener("click", function () {
 // Sayfa açıldıktan 5 saniye sonra göster
 setTimeout(() => {
 
-    document.querySelector(".quiz-popup").style.display = "block";
+    quizPopup.style.display = "block";
 
-    // 40 saniye sonra otomatik kapat
     setTimeout(() => {
-
-        document.querySelector(".quiz-popup").style.display = "none";
-
-    }, 40000);
+        quizPopup.style.display = "none";
+    }, 30000);
 
 }, 5000);
