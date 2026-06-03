@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vianova Kampanyalar</title>
+    <link rel="stylesheet" href="../css/campaigns.css">
+</head>
+<body>
+
+<section class="campaign-hero">
+    <h1>Vianova Kampanyaları</h1>
+    <p>Seçkin niş parfümlerde özel fırsatları keşfedin.</p>
+</section>
+<div class="countdown-container">
+
+    <h2>Kampanyanın Bitmesine</h2>
+
+    <div id="countdown">
+        <div>
+            <span id="days">00</span>
+            <p>Gün</p>
+        </div>
+
+        <div>
+            <span id="hours">00</span>
+            <p>Saat</p>
+        </div>
+
+        <div>
+            <span id="minutes">00</span>
+            <p>Dakika</p>
+        </div>
+
+        <div>
+            <span id="seconds">00</span>
+            <p>Saniye</p>
+        </div>
+    </div>
+
+</div>
+
+<section class="campaign-showcase">
+
+    <div class="campaign-item">
+        <img src="../images/vianova2.jpeg" alt="Kadın Koleksiyonu">
+
+        <div class="campaign-text">
+            <span>%10 İndirim</span>
+            <h2>Kadın Koleksiyonu</h2>
+            <p>Radius, Offline ve The Time serilerinde özel fiyat avantajları.</p>
+            <a href="products.html?category=kadin" class="campaign-btn">
+    Fırsatı İncele
+</a>
+        </div>
+    </div>
+
+    <div class="campaign-item reverse">
+        <img src="../images/vianova3.jpeg" alt="Erkek Koleksiyonu">
+
+        <div class="campaign-text">
+            <span>2 Al 1 Hediye</span>
+            <h2>Erkek Koleksiyonu</h2>
+            <p>Chrome, Chaos ve Jawa serilerinde mini boy parfüm hediyesi.</p>
+            <a href="products.html?category=erkek" class="campaign-btn">
+    Fırsatı İncele
+</a>
+        </div>
+    </div>
+
+</section>
+<script>
+const campaignEndDate = new Date("June 30, 2026 23:59:59").getTime();
+
+setInterval(() => {
+    const now = new Date().getTime();
+    const distance = campaignEndDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}, 1000);
+</script>
+
+</body>
+</html>
