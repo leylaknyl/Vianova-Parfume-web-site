@@ -165,16 +165,17 @@ body {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
 }
 
-.hero-overlay button {
-  padding: 15px 42px;
-  border: none;
-  border-radius: 30px;
-  background: var(--gold);
-  color: var(--burgundy);
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+.hero-overlay button,
+.hero-btn{
+    padding:15px 42px;
+    border:none;
+    border-radius:30px;
+    background:var(--gold);
+    color:var(--burgundy);
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
 }
 
 .hero-overlay button:hover {
@@ -285,6 +286,8 @@ body {
   text-align: left;
   padding-left: 120px;
 }
+
+
 .footer-section h3 {
   color: var(--gold);
   margin-bottom: 20px;
@@ -295,12 +298,27 @@ body {
   color: white;
   line-height: 1.8;
   font-size: 16px;
+}
+.footer-section h3{
+    color:#d8b36a;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.footer-section p{
+    color:#f7f2eb;
+    line-height:1.8;
+    font-size:16px;
+
+}
+
 
   .footer-section h3 {
     color: #d8b36a;
     margin-bottom: 20px;
     font-size: 24px;
   }
+
 
   .footer-section p {
     color: #f7f2eb;
@@ -1324,9 +1342,13 @@ body {
   /* Kalp ikonuna hover efekti */
 
   .favorite-link:hover i {
-    transform: scale(1.15);
+    transform: scale(1.2);
+    color: var(--burgundy);
   }
-}
+
+
+
+
 
 /* QUIZ POPUP */
 .quiz-popup {
@@ -1477,6 +1499,8 @@ body {
 
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 
@@ -1695,6 +1719,7 @@ body {
   color: var(--text);
 }
 
+
 .product-detail-page * {
   box-sizing: border-box;
 }
@@ -1903,4 +1928,6 @@ body {
     width: 92%;
   }
 }
+
+
 
