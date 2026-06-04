@@ -55,7 +55,7 @@ body{
     max-width:1200px;
     margin:0 auto 90px;
     display:flex;
-    align-items:center;
+    align-items:stretch;
     background:white;
     border-radius:25px;
     overflow:hidden;
@@ -63,14 +63,20 @@ body{
 }
 
 .collection-card img{
-    width:55%;
-    height:520px;
+    width:60%;
+    height:100%;
     object-fit:cover;
+    display: block;
+    align-self: stretch;
 }
 
 .collection-text{
-    width:45%;
+    width:40%;
     padding:60px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
 }
 
 .collection-text span{

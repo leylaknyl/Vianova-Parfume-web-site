@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vianova Parfüm</title>
+    <title>Vianova Perfume | Luxury Niche Perfumes</title>
+    <link rel="icon" type="image/png" href="../images/vianovalogo.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
   </head>
-
+<div id="toast"></div>
   <body>
     <div id="loader">
   <h1>VIANOVA</h1>
@@ -111,9 +112,9 @@
 
         <div class="search-container">
           <input type="text" id="searchInput" />
-          <button>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+          <button id="searchBtn">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
         </div>
 
         <div class="header-icons">
@@ -302,6 +303,22 @@
       }
 
       setInterval(typeEffect, 120);
+      const searchBtn = document.getElementById("searchBtn");
+
+searchBtn.addEventListener("click", function () {
+  const searchValue = input.value.trim();
+
+  if (searchValue !== "") {
+    window.location.href =
+      "products.html?search=" + encodeURIComponent(searchValue);
+  }
+});
+
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchBtn.click();
+  }
+});
     </script>
     <script src="../js/quiz.js"></script>
   </body>

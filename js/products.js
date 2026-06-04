@@ -273,7 +273,7 @@ function favoriyeEkle(productId) {
   const zatenVarMi = favoriler.some((product) => product.id === productId);
 
   if (zatenVarMi) {
-    alert("Bu ürün zaten favorilerinizde.");
+    showToast("💛 Bu ürün zaten favorilerinizde.");
     return;
   }
 
@@ -281,7 +281,7 @@ function favoriyeEkle(productId) {
 
   localStorage.setItem("favoriler", JSON.stringify(favoriler));
 
-  alert("♥ " + secilenUrun.name + " favori koleksiyonunuza eklendi.");
+ showToast("🛍 " + secilenUrun.name + " sepete eklendi.");
 }
 
 
@@ -340,8 +340,26 @@ if (productsContainer) {
 
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category");
+  const search = params.get("search");
 
-  if (category === "kadin") {
+  if (search) {
+
+  const bulunanUrunler = products.filter(product =>
+
+    product.name.toLowerCase().includes(search.toLowerCase()) ||
+
+    product.scent.toLowerCase().includes(search.toLowerCase()) ||
+
+    product.category.toLowerCase().includes(search.toLowerCase()) ||
+
+    product.brand.toLowerCase().includes(search.toLowerCase())
+
+  );
+
+  displayProducts(bulunanUrunler);
+
+}
+else if (category === "kadin") {
     categoryFilter.value = "Kadın";
     filterProducts();
   } else if (category === "erkek") {
@@ -350,4 +368,17 @@ if (productsContainer) {
   } else {
     displayProducts(products);
   }
+}
+function showToast(message){
+
+  const toast = document.getElementById("toast");
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+
 }

@@ -3209,3 +3209,32 @@ body {
   font-weight: bold;
 }
 
+/* =========================
+   TOAST BİLDİRİM SİSTEMİ
+========================= */
+
+#toast{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: #6b0f1a;
+  color: white;
+
+  padding: 15px 25px;
+  border-radius: 12px;
+
+  border: 2px solid #c8a96a;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.4s;
+
+  z-index: 9999;
+}
+
+#toast.show{
+  opacity: 1;
+  visibility: visible;
+}

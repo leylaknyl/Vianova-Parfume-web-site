@@ -89,11 +89,28 @@ for (let i = 0; i < erkekUrunleri.length; i++) {
 }
 
 toplam = kadinToplam + erkekToplam;
+let uygulananKampanyalar = [];
+
+if (kadinUrunleri.length >= 2) {
+  uygulananKampanyalar.push("🎁 Kadınlarda 2. Ürüne %10 İndirim");
+}
+
+if (erkekUrunleri.length >= 2) {
+  uygulananKampanyalar.push("🎁 Erkeklerde 2 Al 1 Öde");
+}
 
   toplamFiyat.innerHTML = `
-  <span class="old-total">Eski Toplam: ${eskiToplam} TL</span>
-  <span class="campaign-text">Kampanya uygulandı</span>
-  <span class="new-total">İndirimli Toplam: ${toplam} TL</span>
+  <span class="old-total">
+    Eski Toplam: ${eskiToplam} TL
+  </span>
+
+  <span class="campaign-text">
+    ${uygulananKampanyalar.join("<br>")}
+  </span>
+
+  <span class="new-total">
+    İndirimli Toplam: ${toplam} TL
+  </span>
 `;
 }
 function adetArtir(index) {
@@ -128,5 +145,7 @@ sepetiTemizleBtn.addEventListener("click", function () {
   sepet = [];
 
   localStorage.setItem("sepet", JSON.stringify(sepet));
+
+  sepetiGoster();
 });
 sepetiGoster();

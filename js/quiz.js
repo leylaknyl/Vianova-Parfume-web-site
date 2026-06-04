@@ -75,6 +75,6 @@ setTimeout(() => {
 
     setTimeout(() => {
         quizPopup.style.display = "none";
-    }, 30000);
+    }, 20000);
 
-}, 5000);
+}, 10000);
