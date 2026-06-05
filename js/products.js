@@ -8,15 +8,17 @@ const products = [
     category: "Kadın",
     scent: "Oriental",
     price: 1662,
+    rating: 4.5,
     images: [
       "../images/radius1.jpg",
       "../images/radius2.jpg",
-      "../images/radius3.jpg"
+      "../images/radius3.jpg",
     ],
     topNotes: "Armut, Pembe Biber, Portakal Çiçeği",
-middleNotes: "Kahve, Yasemin, Acı Badem",
-baseNotes: "Vanilya, Paçuli, Sedir Ağacı, Kaşmir Ağacı, Misk, Amber",
-description: "Radius, girdiği ortamda iz bırakmak isteyen kadınlar için tasarlanmış etkileyici bir oryantal kokudur. Armut, pembe biber ve portakal çiçeğinin canlı açılışı; kahve, yasemin ve acı bademin sofistike dokusuyla derinleşir. Vanilya, amber, misk ve odunsu notalarla tamamlanan bu parfüm, güçlü, feminen ve unutulmaz bir imza koku sunar."
+    middleNotes: "Kahve, Yasemin, Acı Badem",
+    baseNotes: "Vanilya, Paçuli, Sedir Ağacı, Kaşmir Ağacı, Misk, Amber",
+    description:
+      "Radius, girdiği ortamda iz bırakmak isteyen kadınlar için tasarlanmış etkileyici bir oryantal kokudur. Armut, pembe biber ve portakal çiçeğinin canlı açılışı; kahve, yasemin ve acı bademin sofistike dokusuyla derinleşir. Vanilya, amber, misk ve odunsu notalarla tamamlanan bu parfüm, güçlü, feminen ve unutulmaz bir imza koku sunar.",
   },
   {
     id: 2,
@@ -27,15 +29,18 @@ description: "Radius, girdiği ortamda iz bırakmak isteyen kadınlar için tasa
     category: "Kadın",
     scent: "Floral",
     price: 1670,
+    rating: 4.7,
     images: [
       "../images/thetime1.jpg",
       "../images/thetime2.jpg",
-      "../images/thetime3.jpg"
+      "../images/thetime3.jpg",
     ],
-    topNotes: "Çarkıfelek, Şeftali, Armut, Ahududu, Siyah Frenk Üzümü, Kum Akoru",
-middleNotes: "Müge",
-baseNotes: "Misk, Sandal Ağacı, Vanilya, Paçuli, Heliotrop",
-description: "The Time, unutulmaz anların zarafetinden ilham alan çiçeksi ve feminen bir kokudur. Meyvemsi açılışı çarkıfelek, şeftali, armut, ahududu ve siyah frenk üzümüyle canlı bir etki yaratır. Müge notasının narin dokusu; misk, sandal ağacı, vanilya ve paçuliyle birleşerek yumuşak, zarif ve kalıcı bir iz bırakır."
+    topNotes:
+      "Çarkıfelek, Şeftali, Armut, Ahududu, Siyah Frenk Üzümü, Kum Akoru",
+    middleNotes: "Müge",
+    baseNotes: "Misk, Sandal Ağacı, Vanilya, Paçuli, Heliotrop",
+    description:
+      "The Time, unutulmaz anların zarafetinden ilham alan çiçeksi ve feminen bir kokudur. Meyvemsi açılışı çarkıfelek, şeftali, armut, ahududu ve siyah frenk üzümüyle canlı bir etki yaratır. Müge notasının narin dokusu; misk, sandal ağacı, vanilya ve paçuliyle birleşerek yumuşak, zarif ve kalıcı bir iz bırakır.",
   },
   {
     id: 3,
@@ -46,15 +51,18 @@ description: "The Time, unutulmaz anların zarafetinden ilham alan çiçeksi ve 
     category: "Kadın",
     scent: "Fruity",
     price: 1650,
+    rating: 4.6,  
     images: [
       "../images/offline1.jpg",
       "../images/offline2.jpg",
-      "../images/offline3.jpg"
+      "../images/offline3.jpg",
     ],
-    topNotes: "Çilek, Ahududu, Vişne, Böğürtlen, Yaban Mersini, Siyah Frenk Üzümü",
-middleNotes: "Menekşe, Yasemin",
-baseNotes: "Misk, Amber, Meşe",
-description: "Off Line, enerjik ve modern kadınlar için tasarlanmış canlı bir meyveli kokudur. Çilek, ahududu, vişne, böğürtlen ve yaban mersininin parlak açılışı neşeli ve dikkat çekici bir etki oluşturur. Menekşe ve yaseminin zarif dokusu, misk, amber ve meşe notalarıyla birleşerek sıcak ve akılda kalıcı bir final sunar."
+    topNotes:
+      "Çilek, Ahududu, Vişne, Böğürtlen, Yaban Mersini, Siyah Frenk Üzümü",
+    middleNotes: "Menekşe, Yasemin",
+    baseNotes: "Misk, Amber, Meşe",
+    description:
+      "Off Line, enerjik ve modern kadınlar için tasarlanmış canlı bir meyveli kokudur. Çilek, ahududu, vişne, böğürtlen ve yaban mersininin parlak açılışı neşeli ve dikkat çekici bir etki oluşturur. Menekşe ve yaseminin zarif dokusu, misk, amber ve meşe notalarıyla birleşerek sıcak ve akılda kalıcı bir final sunar.",
   },
   {
     id: 4,
@@ -65,15 +73,18 @@ description: "Off Line, enerjik ve modern kadınlar için tasarlanmış canlı b
     category: "Erkek",
     scent: "Spicy",
     price: 1585,
+    rating: 4.8,
     images: [
       "../images/chrome1.jpg",
       "../images/chrome2.jpg",
-      "../images/chrome3.jpg"
+      "../images/chrome3.jpg",
     ],
-     topNotes: "Tarçın, Kakule, Portakal Çiçeği, Bergamot",
-middleNotes: "Bourbon Vanilya, Elemi Reçinesi",
-baseNotes: "Pralin, Misk, Ambroxan, Guaiac Ağacı, Tonka",
-description: "Chrome, güçlü ve sofistike bir duruşa sahip erkekler için tasarlanmış baharatlı bir kokudur. Tarçın, kakule, portakal çiçeği ve bergamotla etkileyici bir açılış yapar. Bourbon vanilya ve elemi reçinesi kokuya sıcaklık katarken; pralin, misk, ambroxan, guaiac ağacı ve tonka notaları maskülen, derin ve kalıcı bir karakter oluşturur." },
+    topNotes: "Tarçın, Kakule, Portakal Çiçeği, Bergamot",
+    middleNotes: "Bourbon Vanilya, Elemi Reçinesi",
+    baseNotes: "Pralin, Misk, Ambroxan, Guaiac Ağacı, Tonka",
+    description:
+      "Chrome, güçlü ve sofistike bir duruşa sahip erkekler için tasarlanmış baharatlı bir kokudur. Tarçın, kakule, portakal çiçeği ve bergamotla etkileyici bir açılış yapar. Bourbon vanilya ve elemi reçinesi kokuya sıcaklık katarken; pralin, misk, ambroxan, guaiac ağacı ve tonka notaları maskülen, derin ve kalıcı bir karakter oluşturur.",
+  },
   {
     id: 5,
     name: "CHAOS",
@@ -83,15 +94,17 @@ description: "Chrome, güçlü ve sofistike bir duruşa sahip erkekler için tas
     category: "Erkek",
     scent: "Aromatic",
     price: 1560,
+    rating: 4.9,
     images: [
       "../images/chaos1.jpg",
       "../images/chaos2.jpg",
-      "../images/chaos3.jpg"
+      "../images/chaos3.jpg",
     ],
-   topNotes: "Bergamot, Liçi, Şeftali",
-middleNotes: "Şakayık, Yasemin, Portakal Çiçeği",
-baseNotes: "Misk, Odunsu Notalar, Meşe Yosunu",
-description: "Chaos, ferahlık, zarafet ve maskülen enerjiyi bir araya getiren aromatik bir kokudur. Bergamot, liçi ve şeftalinin aydınlık açılışı kokuya canlı bir başlangıç verir. Şakayık, yasemin ve portakal çiçeğinin yumuşak kalbi; misk, odunsu notalar ve meşe yosunuyla dengelenerek temiz, güçlü ve günlük kullanıma uygun bir iz bırakır."
+    topNotes: "Bergamot, Liçi, Şeftali",
+    middleNotes: "Şakayık, Yasemin, Portakal Çiçeği",
+    baseNotes: "Misk, Odunsu Notalar, Meşe Yosunu",
+    description:
+      "Chaos, ferahlık, zarafet ve maskülen enerjiyi bir araya getiren aromatik bir kokudur. Bergamot, liçi ve şeftalinin aydınlık açılışı kokuya canlı bir başlangıç verir. Şakayık, yasemin ve portakal çiçeğinin yumuşak kalbi; misk, odunsu notalar ve meşe yosunuyla dengelenerek temiz, güçlü ve günlük kullanıma uygun bir iz bırakır.",
   },
   {
     id: 6,
@@ -102,16 +115,18 @@ description: "Chaos, ferahlık, zarafet ve maskülen enerjiyi bir araya getiren 
     category: "Erkek",
     scent: "Aromatic",
     price: 1560,
+    rating: 4.7,
     images: [
       "../images/jawa1.jpg",
       "../images/jawa2.jpg",
-      "../images/jawa3.jpg"
+      "../images/jawa3.jpg",
     ],
     topNotes: "Tarçın, Kakule, Greyfurt",
-middleNotes: "Lavanta",
-baseNotes: "Meyan Kökü, Sandal Ağacı, Amber, Paçuli, Vetiver",
-description: "Jawa, kendinden emin ve karakteristik kokuları tercih eden erkekler için tasarlanmış aromatik bir parfümdür. Tarçın, kakule ve greyfurtun baharatlı ve enerjik açılışı lavantanın temiz dokusuyla dengelenir. Meyan kökü, sandal ağacı, amber, paçuli ve vetiver notaları ise kokuya derin, sıcak ve maskülen bir bitiş kazandırır."
-  }
+    middleNotes: "Lavanta",
+    baseNotes: "Meyan Kökü, Sandal Ağacı, Amber, Paçuli, Vetiver",
+    description:
+      "Jawa, kendinden emin ve karakteristik kokuları tercih eden erkekler için tasarlanmış aromatik bir parfümdür. Tarçın, kakule ve greyfurtun baharatlı ve enerjik açılışı lavantanın temiz dokusuyla dengelenir. Meyan kökü, sandal ağacı, amber, paçuli ve vetiver notaları ise kokuya derin, sıcak ve maskülen bir bitiş kazandırır.",
+  },
 ];
 
 const productsContainer = document.getElementById("productsContainer");
@@ -127,7 +142,12 @@ function displayProducts(productList) {
     return;
   }
 
-  productList.forEach(product => {
+  /* =========================
+   ÜRÜN KARTI BUTONLARI
+========================= */
+
+
+  productList.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
 
@@ -140,35 +160,67 @@ function displayProducts(productList) {
         <p class="brand">${product.brand} | ${product.type} | ${product.size}</p>
         <p class="scent">${product.scent}</p>
         <p class="price">₺${product.price}</p>
+       ${createStaticRatingHTML(product)}
 
-        <div class="product-buttons">
-  <button type="button" class="details-btn" data-id="${product.id}">Detayları Gör</button>
-</div>
+               <div class="product-buttons">
+          <div class="top-product-buttons">
 
-        <button onclick="viewDetails(${product.id})">Detayları Gör</button>
+            <button class="details-btn" data-id="${product.id}">
+              <i class="fa-regular fa-eye"></i>
+              Detayları Gör
+            </button>
 
-        <button class="cart-btn" data-id="${product.id}">
-          Sepete Ekle
-        </button>
+            <button class="favorite-icon-btn" onclick="favoriyeEkle(${product.id})">
+    <i class="fa-solid fa-heart"></i>
+</button>
 
-        <button class="favorite-btn" onclick="favoriyeEkle(${product.id})">
-          ♥
-        </button>
-      </div>
+          </div>
 
-      </div>
+          <button class="cart-btn" onclick="sepeteEkle(${product.id})">
+            <i class="fa-solid fa-bag-shopping"></i>
+            Sepete Ekle
+          </button>
+        </div>
     `;
 
     productsContainer.appendChild(productCard);
   });
 }
 
+
+
+function createStaticRatingHTML(product) {
+  const rating = product.rating;
+  const roundedRating = Math.round(rating);
+  let starsHTML = "";
+
+  for (let i = 1; i <= 5; i++) {
+    starsHTML += `<span class="static-star ${i <= roundedRating ? "active" : ""}">★</span>`;
+  }
+
+  return `
+    <div class="rating-box static-rating">
+      <div class="rating-stars">
+        ${starsHTML}
+      </div>
+      <span class="rating-score">${rating.toFixed(1)} / 5</span>
+    </div>
+  `;
+}
+
+
+
+/* =========================
+   ÜRÜN FİLTRELEME SİSTEMİ
+========================= */
+
+
 function filterProducts() {
   const selectedCategory = categoryFilter.value.trim();
   const selectedScent = scentFilter.value.trim();
   const selectedPrice = priceFilter.value.trim();
 
-  const filteredProducts = products.filter(product => {
+  const filteredProducts = products.filter((product) => {
     const productCategory = product.category.trim();
     const productScent = product.scent.trim();
 
@@ -194,41 +246,34 @@ function filterProducts() {
   displayProducts(filteredProducts);
 }
 
+/* =========================
+   DETAY SAYFASINA GİTME
+========================= */
 
-if (productsContainer) {
-  categoryFilter.addEventListener("change", filterProducts);
-  scentFilter.addEventListener("change", filterProducts);
-  priceFilter.addEventListener("change", filterProducts);
-
-  displayProducts(products);
-
-categoryFilter.addEventListener("change", filterProducts);
-scentFilter.addEventListener("change", filterProducts);
-priceFilter.addEventListener("change", filterProducts);
-
-displayProducts(products);
-const params = new URLSearchParams(window.location.search);
-const category = params.get("category");
-
-if(category === "kadin"){
-  categoryFilter.value = "Kadın";
-  filterProducts();
+function openProductDetail(productId) {
+  localStorage.setItem("selectedProductId", productId);
+  window.location.href = `product-detail.html?id=${productId}`;
 }
 
-if(category === "erkek"){
-  categoryFilter.value = "Erkek";
-  filterProducts();
-}
+
+/* =========================
+   FAVORİLERE EKLEME SİSTEMİ
+========================= */
 
 function favoriyeEkle(productId) {
-  const secilenUrun = products.find(product => product.id === productId);
+  const secilenUrun = products.find((product) => product.id === productId);
+
+  if (!secilenUrun) {
+    alert("Ürün bulunamadı.");
+    return;
+  }
 
   let favoriler = JSON.parse(localStorage.getItem("favoriler")) || [];
 
-  const zatenVarMi = favoriler.some(product => product.id === productId);
+  const zatenVarMi = favoriler.some((product) => product.id === productId);
 
   if (zatenVarMi) {
-    alert("Bu ürün zaten favorilerinizde.");
+    showToast("💛 Bu ürün zaten favorilerinizde.");
     return;
   }
 
@@ -236,14 +281,48 @@ function favoriyeEkle(productId) {
 
   localStorage.setItem("favoriler", JSON.stringify(favoriler));
 
-  alert(secilenUrun.name + " favorilere eklendi.");
-
-} }
-
-function openProductDetail(productId) {
-  localStorage.setItem("selectedProductId", productId);
-  window.location.href = "product-detail.html";
+ showToast("🛍 " + secilenUrun.name + " sepete eklendi.");
 }
+
+
+/* =========================
+   SEPETE EKLEME SİSTEMİ
+========================= */
+
+function sepeteEkle(productId) {
+  const secilenUrun = products.find((product) => product.id === productId);
+
+  if (!secilenUrun) {
+    alert("Ürün bulunamadı.");
+    return;
+  }
+
+  let sepet = JSON.parse(localStorage.getItem("sepet")) || [];
+
+  const sepetteVarMi = sepet.find((product) => product.id === productId);
+
+  if (sepetteVarMi) {
+    sepetteVarMi.adet += 1;
+  } else {
+    secilenUrun.adet = 1;
+    sepet.push(secilenUrun);
+  }
+
+  localStorage.setItem("sepet", JSON.stringify(sepet));
+
+  alert("🛍 " + secilenUrun.name + " sepete eklendi.");
+}
+
+
+/* Inline onclick'lerin çalışması için global yapıyoruz */
+window.favoriyeEkle = favoriyeEkle;
+window.sepeteEkle = sepeteEkle;
+window.openProductDetail = openProductDetail;
+
+
+/* =========================
+   SAYFA BAŞLANGICI VE EVENTLER
+========================= */
 
 if (productsContainer) {
   categoryFilter.addEventListener("change", filterProducts);
@@ -259,5 +338,47 @@ if (productsContainer) {
     }
   });
 
-  displayProducts(products);
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get("category");
+  const search = params.get("search");
+
+  if (search) {
+
+  const bulunanUrunler = products.filter(product =>
+
+    product.name.toLowerCase().includes(search.toLowerCase()) ||
+
+    product.scent.toLowerCase().includes(search.toLowerCase()) ||
+
+    product.category.toLowerCase().includes(search.toLowerCase()) ||
+
+    product.brand.toLowerCase().includes(search.toLowerCase())
+
+  );
+
+  displayProducts(bulunanUrunler);
+
+}
+else if (category === "kadin") {
+    categoryFilter.value = "Kadın";
+    filterProducts();
+  } else if (category === "erkek") {
+    categoryFilter.value = "Erkek";
+    filterProducts();
+  } else {
+    displayProducts(products);
+  }
+}
+function showToast(message){
+
+  const toast = document.getElementById("toast");
+
+  toast.textContent = message;
+
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+
 }

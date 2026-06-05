@@ -3,10 +3,14 @@ const closeQuizBtn = document.getElementById("closeQuizBtn");
 const quizModal = document.getElementById("quizModal");
 const showResultBtn = document.getElementById("showResultBtn");
 const quizResult = document.getElementById("quizResult");
+const quizPopup = document.querySelector(".quiz-popup");
 
 openQuizBtn.addEventListener("click", function () {
+
+    document.querySelector(".quiz-popup").style.display = "none";
+
     quizModal.classList.add("active");
-    openQuizBtn.parentElement.style.display = "none";
+
 });
 
 closeQuizBtn.addEventListener("click", function () {
@@ -64,3 +68,13 @@ showResultBtn.addEventListener("click", function () {
         }
     }
 });
+// Sayfa açıldıktan 5 saniye sonra göster
+setTimeout(() => {
+
+    quizPopup.style.display = "block";
+
+    setTimeout(() => {
+        quizPopup.style.display = "none";
+    }, 20000);
+
+}, 10000);

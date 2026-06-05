@@ -8,27 +8,54 @@ function favorileriGoster() {
   favoriListesi.innerHTML = "";
 
   if (favoriler.length === 0) {
-    favoriMesaj.innerHTML = "Favori ürününüz yok.";
+    favoriMesaj.innerHTML = "Henüz favori parfümünüz bulunmuyor.";
+
+    favorileriTemizleBtn.style.display = "none";
+
     return;
   }
 
-  favoriMesaj.innerHTML = favoriler.length + " favori ürününüz var.";
+  favorileriTemizleBtn.style.display = "block";
+
+  favoriMesaj.innerHTML = `♥ Koleksiyonunuzda ${favoriler.length} favori parfüm bulunuyor`;
 
   for (let i = 0; i < favoriler.length; i++) {
     favoriListesi.innerHTML += `
-      <li>
+<div class="favorite-card">
+
+    <div class="favorite-image-box">
+
+        <img src="${favoriler[i].images[0]}" alt="${favoriler[i].name}">
+
+        <span class="favorite-badge">
+            ♥
+        </span>
+
+    </div>
+
+    <div class="favorite-info">
+
         <h3>${favoriler[i].name}</h3>
-        <p>${favoriler[i].category}</p>
-        <p>${favoriler[i].scent}</p>
-        <p>₺${favoriler[i].price}</p>
 
-        <button onclick="favoridenSil(${i})">
-          Favoriden Çıkar
-        </button>
+        <p>${favoriler[i].category} Parfüm</p>
 
-        <hr>
-      </li>
-    `;
+        <p class="favorite-scent">
+            ${favoriler[i].scent}
+        </p>
+
+        <span class="favorite-price">
+            ₺${favoriler[i].price}
+        </span>
+
+        <button class="favorite-btn" onclick="favoridenSil(${i})">
+    <i class="fa-solid fa-heart-crack"></i>
+    Favorilerden Çıkar
+</button>
+
+    </div>
+
+</div>
+`;
   }
 }
 
